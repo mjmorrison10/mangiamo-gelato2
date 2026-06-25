@@ -43,6 +43,61 @@
       "dietary": "Limited Batch"
     },
     {
+      "id": "double_choc",
+      "name": "Double Valrhona Chocolate Chip",
+      "category": "heritage",
+      "badge": "French Cocoa",
+      "badgeType": "badge-heritage",
+      "desc": "Intense, dark 70% Valrhona chocolate emulsion folded with thick dark chocolate chunks. Decadent, silky, and profoundly rich without the artificial sweetness of commercial chocolate ice cream.",
+      "spunTime": "8:30 AM",
+      "status": "Available",
+      "dietary": "Gluten-Free"
+    },
+    {
+      "id": "cookies_cream",
+      "name": "HB Pier Cookies & Sweet Cream",
+      "category": "heritage",
+      "badge": "Pier Walk Classic",
+      "badgeType": "badge-heritage",
+      "desc": "Our artisanal elevate on a childhood staple. Daily spun organic sweet cream folded generously with crushed dark chocolate sandwich biscuits. Silky smooth peaks with satisfying textural crunch.",
+      "spunTime": "9:00 AM",
+      "status": "Available",
+      "dietary": "Kid Favorite"
+    },
+    {
+      "id": "sea_salt_caramel",
+      "name": "Pacific Sea Salt Caramel",
+      "category": "heritage",
+      "badge": "Sweet & Salty",
+      "badgeType": "badge-heritage",
+      "desc": "Slow-cooked burnt sugar caramel churned into dense cream, finished with crunchy flakes of coarse Pacific ocean salt. Perfectly balanced recovery fuel after a long surf session.",
+      "spunTime": "9:15 AM",
+      "status": "Available",
+      "dietary": "Gluten-Free"
+    },
+    {
+      "id": "tiramisu",
+      "name": "Tiramisu Tradizionale",
+      "category": "heritage",
+      "badge": "Venetian Classic",
+      "badgeType": "badge-heritage",
+      "desc": "Rich mascarpone gelato layered with savoiardi ladyfingers soaked in bold LaVazza espresso and Sicilian Marsala wine, dusted heavily with raw French cocoa powder.",
+      "spunTime": "10:15 AM",
+      "status": "Sold Out",
+      "dietary": "Contains Contains Egg/Dairy"
+    },
+    {
+      "id": "gianduja",
+      "name": "Gianduja (Piedmont Hazelnut Chocolate)",
+      "category": "heritage",
+      "badge": "Turin Heritage",
+      "badgeType": "badge-heritage",
+      "desc": "The quintessential Northern Italian pairing of imported IGP Piedmont hazelnuts ground into silky paste and blended with smooth milk chocolate.",
+      "spunTime": "Vault",
+      "status": "Hidden",
+      "dietary": "Gluten-Free"
+    },
+    {
       "id": "mango",
       "name": "Pacific Coast Mango Sorbetto",
       "category": "sorbetto",
@@ -63,6 +118,39 @@
       "spunTime": "10:30 AM",
       "status": "Available",
       "dietary": "Local Harvest"
+    },
+    {
+      "id": "rasp_champagne",
+      "name": "Raspberry Champagne Sorbetto",
+      "category": "sorbetto",
+      "badge": "Yelp Reviewer Pick",
+      "badgeType": "badge-sorbetto",
+      "desc": "Tart Pacific Northwest red raspberries churned with crisp dry California bubbly. Highly recommended by local foodie reviewers for its refreshing, effervescent sunset finish.",
+      "spunTime": "11:00 AM",
+      "status": "Almost Sold Out",
+      "dietary": "Vegan / GF"
+    },
+    {
+      "id": "passion_fruit",
+      "name": "Tropical Passion Fruit Sorbetto",
+      "category": "sorbetto",
+      "badge": "Dairy-Free",
+      "badgeType": "badge-sorbetto",
+      "desc": "Bright, tangy, and intensely aromatic tropical passion fruit pulp spun with pure spring water. Incredibly refreshing palate cleanser on a hot beach day.",
+      "spunTime": "Vault",
+      "status": "Hidden",
+      "dietary": "Vegan / GF"
+    },
+    {
+      "id": "limone",
+      "name": "Limone Siciliano Sorbetto",
+      "category": "sorbetto",
+      "badge": "Amalfi Style",
+      "badgeType": "badge-sorbetto",
+      "desc": "Zesty, vibrant organic yellow lemons imported from Southern Italy. Crisp, clean acidity that cuts right through summer beach heat.",
+      "spunTime": "Vault",
+      "status": "Hidden",
+      "dietary": "Vegan / GF"
     },
     {
       "id": "affogato",

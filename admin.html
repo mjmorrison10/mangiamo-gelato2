@@ -285,11 +285,12 @@
         div.className = 'item-pos-card';
         div.innerHTML = `
           <div class="item-title">${item.name}</div>
-          <div class="item-meta">Current Status: <strong style="color:${item.status === 'Sold Out' ? '#F87171' : '#4ADE80'}">${item.status}</strong> • Spun: ${item.spunTime}</div>
+          <div class="item-meta">Current Status: <strong style="color:${item.status === 'Sold Out' ? '#F87171' : item.status === 'Hidden' ? '#94A3B8' : '#4ADE80'}">${item.status}</strong> • Spun: ${item.spunTime}</div>
           <div class="item-actions">
             <button class="btn-action btn-now" onclick="updateItemSpun(${idx})">Spun Now</button>
             <button class="btn-action btn-avail" onclick="updateItemStatus(${idx}, 'Available')">Available</button>
             <button class="btn-action btn-sold" onclick="updateItemStatus(${idx}, 'Sold Out')">Sold Out</button>
+            <button class="btn-action" style="background:#475569" onclick="updateItemStatus(${idx}, 'Hidden')">Vault (Hide)</button>
           </div>
         `;
         container.appendChild(div);

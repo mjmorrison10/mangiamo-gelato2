@@ -1599,6 +1599,7 @@
           if (grid) {
             grid.innerHTML = '';
             data.menuItems.forEach(item => {
+              if (item.status === 'Hidden' || item.status === 'In Vault' || item.status === 'Vault') return; // Hide non-spinning vault recipes
               const card = document.createElement('div');
               card.className = 'flavor-card';
               card.setAttribute('data-category', item.category);
