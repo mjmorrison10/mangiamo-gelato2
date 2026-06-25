@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mangiamo POS Admin | Zero-Cost Live Churn Controller</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0F172A;
+      --bg-card: #1E293B;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --terracotta: #D96B43;
+      --navy: #1B365D;
+      --sage: #8A9A86;
+      --gold: #E5A93B;
+      --red: #EF4444;
+      --green: #22C55E;
+      --radius: 16px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      padding: 20px 20px 100px;
+      line-height: 1.5;
+    }
+
+    .container { max-width: 640px; margin: 0 auto; }
+
+    header {
+      border-bottom: 2px solid #334155;
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h1 { font-size: 1.4rem; font-weight: 800; color: var(--gold); }
+    .badge-free { background: rgba(34, 197, 94, 0.2); color: var(--green); padding: 4px 10px; border-radius: 99px; font-size: 0.75rem; font-weight: 800; border: 1px solid var(--green); }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #334155;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .card h2 { font-size: 1.1rem; margin-bottom: 15px; color: #E2E8F0; display: flex; align-items: center; gap: 8px; }
+
+    label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px; }
+    input[type="text"], select {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      background: #0F172A;
+      border: 1px solid #475569;
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .row { display: flex; gap: 10px; align-items: center; margin-bottom: 14px; }
+    .row > * { flex: 1; margin-bottom: 0; }
+
+    .btn-action {
+      background: #334155;
+      color: white;
+      border: none;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: center;
+    }
+    .btn-action:hover { background: #475569; }
+    .btn-now { background: var(--sage); color: #0F172A; }
+    .btn-sold { background: rgba(239, 68, 68, 0.2); color: #F87171; border: 1px solid #EF4444; }
+    .btn-avail { background: rgba(34, 197, 94, 0.2); color: #4ADE80; border: 1px solid #22C55E; }
+
+    .item-pos-card {
+      background: rgba(15, 23, 42, 0.6);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 12px;
+      border-left: 4px solid var(--terracotta);
+    }
+    .item-title { font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; }
+    .item-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; }
+
+    .item-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+    .item-actions button { flex: 1; min-width: 110px; padding: 10px; font-size: 0.8rem; }
+
+    /* STICKY BOTTOM BAR */
+    .sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 16px 20px;
+      border-top: 2px solid var(--terracotta);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn-publish {
+      width: 100%;
+      max-width: 640px;
+      background: linear-gradient(135deg, var(--terracotta), #C55831);
+      color: white;
+      border: none;
+      padding: 18px;
+      border-radius: 99px;
+      font-size: 1.1rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(217, 107, 67, 0.4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-publish:active { transform: scale(0.98); }
+
+    .status-toast {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--green);
+      color: #0F172A;
+      padding: 12px 24px;
+      border-radius: 99px;
+      font-weight: 800;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      display: none;
+      z-index: 2000;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="status-toast" id="toast">🚀 Live Website Updated!</div>
+
+  <div class="container">
+    
+    <header>
+      <div>
+        <h1>Mangiamo POS Dashboard</h1>
+        <div style="font-size: 0.8rem; color: var(--text-muted);">Master Builder Bob Hoxsie Live POS</div>
+      </div>
+      <span class="badge-free">⚡ $0.00 FOREVER</span>
+    </header>
+
+    <!-- AUTH CARD -->
+    <div class="card">
+      <h2>🔐 GitHub Admin Connection</h2>
+      <label>Saved Access Token (PAT)</label>
+      <input type="text" id="patInput" placeholder="ghp_xxx..." onchange="savePat()">
+      <div style="font-size: 0.75rem; color: var(--text-muted);">Token is saved securely in your device's browser storage. Zero server costs.</div>
+    </div>
+
+    <!-- LIVE HERO TICKER CONTROLLER -->
+    <div class="card">
+      <h2>🚨 Top Live Ticker Alert</h2>
+      
+      <label>Featured Batch Flavor</label>
+      <input type="text" id="tickerFlavor" value="Amarena Cherry &amp; Dark Valrhona">
+
+      <div class="row">
+        <div>
+          <label>Spun Time</label>
+          <input type="text" id="tickerTime" value="2:10 PM">
+        </div>
+        <div>
+          <label>&nbsp;</label>
+          <button class="btn-action btn-now" onclick="setTickerTimeNow()">Set Time Now</button>
+        </div>
+      </div>
+
+      <label>Portions Remaining Indicator</label>
+      <input type="text" id="tickerPortions" value="⏱️ 12 Portions Remaining">
+
+      <label>Urgency State</label>
+      <select id="tickerActive">
+        <option value="true">🟢 Ticker ACTIVE on Pier Walk</option>
+        <option value="false">🔴 Ticker HIDDEN</option>
+      </select>
+    </div>
+
+    <!-- SMALL BATCH FLAVOR CONTROLLERS -->
+    <div class="card" id="menuListCard">
+      <h2>🍦 Rotating Churn Status Board</h2>
+      <div id="flavorsList">Loading flavor data...</div>
+    </div>
+
+  </div>
+
+  <div class="sticky-bar">
+    <button class="btn-publish" onclick="publishChanges()">
+      <span>🚀 PUBLISH LIVE TO PIER WALK ($0 FREE)</span>
+    </button>
+  </div>
+
+  <script>
+    const REPO_OWNER = 'mjmorrison10';
+    const REPO_NAME = 'mangiamo-gelato2';
+    const FILE_PATH = 'data/churn.json';
+
+    let currentData = null;
+    let fileSha = null;
+
+    // Load PAT from localStorage
+    const savedPat = localStorage.getItem('mangiamo_pos_pat');
+    if(savedPat) {
+      document.getElementById('patInput').value = savedPat;
+    }
+
+    function savePat() {
+      const val = document.getElementById('patInput').value.trim();
+      localStorage.setItem('mangiamo_pos_pat', val);
+    }
+
+    function setTickerTimeNow() {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString([], {hour: 'numeric', minute:'2-digit'});
+      document.getElementById('tickerTime').value = timeStr;
+    }
+
+    // Fetch existing churn.json
+    async function loadData() {
+      try {
+        const res = await fetch(`${FILE_PATH}?t=` + Date.now());
+        currentData = await res.json();
+        renderDashboard();
+      } catch(err) {
+        document.getElementById('flavorsList').innerHTML = 'Error loading local data.';
+      }
+
+      // Also try to get SHA from GitHub API if token exists
+      fetchSha();
+    }
+
+    async function fetchSha() {
+      const pat = localStorage.getItem('mangiamo_pos_pat');
+      if(!pat) return;
+      try {
+        const res = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`, {
+          headers: { 'Authorization': `token ${pat}` }
+        });
+        const json = await res.json();
+        if(json.sha) fileSha = json.sha;
+      } catch(e) {}
+    }
+
+    function renderDashboard() {
+      if(!currentData) return;
+
+      // Populate ticker
+      document.getElementById('tickerFlavor').value = currentData.liveTicker.flavorName;
+      document.getElementById('tickerTime').value = currentData.liveTicker.spunTime;
+      document.getElementById('tickerPortions').value = currentData.liveTicker.portionsLeft;
+      document.getElementById('tickerActive').value = currentData.liveTicker.active ? "true" : "false";
+
+      // Populate items
+      const container = document.getElementById('flavorsList');
+      container.innerHTML = '';
+
+      currentData.menuItems.forEach((item, idx) => {
+        const div = document.createElement('div');
+        div.className = 'item-pos-card';
+        div.innerHTML = `
+          <div class="item-title">${item.name}</div>
+          <div class="item-meta">Current Status: <strong style="color:${item.status === 'Sold Out' ? '#F87171' : '#4ADE80'}">${item.status}</strong> • Spun: ${item.spunTime}</div>
+          <div class="item-actions">
+            <button class="btn-action btn-now" onclick="updateItemSpun(${idx})">Spun Now</button>
+            <button class="btn-action btn-avail" onclick="updateItemStatus(${idx}, 'Available')">Available</button>
+            <button class="btn-action btn-sold" onclick="updateItemStatus(${idx}, 'Sold Out')">Sold Out</button>
+          </div>
+        `;
+        container.appendChild(div);
+      });
+    }
+
+    function updateItemSpun(idx) {
+      const now = new Date();
+      const timeStr = now.toLocaleTimeString([], {hour: 'numeric', minute:'2-digit'});
+      currentData.menuItems[idx].spunTime = timeStr;
+      renderDashboard();
+    }
+
+    function updateItemStatus(idx, status) {
+      currentData.menuItems[idx].status = status;
+      renderDashboard();
+    }
+
+    async function publishChanges() {
+      const pat = localStorage.getItem('mangiamo_pos_pat');
+      if(!pat) {
+        alert('Please enter your saved GitHub PAT at the top first!');
+        return;
+      }
+
+      const btn = document.querySelector('.btn-publish span');
+      btn.innerHTML = '⏳ PUBLISHING TO GITHUB CDN...';
+
+      // Ensure we have latest SHA
+      await fetchSha();
+
+      // Gather ticker updates
+      currentData.updatedAt = new Date().toISOString();
+      currentData.liveTicker.flavorName = document.getElementById('tickerFlavor').value;
+      currentData.liveTicker.spunTime = document.getElementById('tickerTime').value;
+      currentData.liveTicker.portionsLeft = document.getElementById('tickerPortions').value;
+      currentData.liveTicker.active = document.getElementById('tickerActive').value === "true";
+
+      const contentBase64 = btoa(unescape(encodeURIComponent(JSON.stringify(currentData, null, 2))));
+
+      try {
+        const putRes = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`, {
+          method: 'PUT',
+          headers: {
+            'Authorization': `token ${pat}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            message: `feat(pos): Bob Hoxsie mobile POS update ${new Date().toLocaleTimeString()}`,
+            content: contentBase64,
+            sha: fileSha
+          })
+        });
+
+        if(putRes.ok) {
+          const resJson = await putRes.json();
+          fileSha = resJson.content.sha;
+          showToast();
+        } else {
+          const errJson = await putRes.json();
+          alert('Publish failed: ' + (errJson.message || putRes.statusText));
+        }
+      } catch(err) {
+        alert('Network error publishing changes.');
+      }
+
+      btn.innerHTML = '🚀 PUBLISH LIVE TO PIER WALK ($0 FREE)';
+    }
+
+    function showToast() {
+      const t = document.getElementById('toast');
+      t.style.display = 'block';
+      setTimeout(() => t.style.display = 'none', 4000);
+    }
+
+    loadData();
+  </script>
+</body>
+</html>

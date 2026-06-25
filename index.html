@@ -1564,12 +1564,62 @@
       const ticker = document.getElementById('liveTicker');
       if(ticker) {
         const portionsEl = ticker.querySelector('span:last-child');
-        if(portionsEl) {
+        if(portionsEl && portionsEl.innerHTML.includes('Remaining')) {
           portionsEl.innerHTML = '⏱️ 9 Portions Remaining';
           portionsEl.style.backgroundColor = '#FF3B30';
         }
       }
     }, 12000);
+
+    // 4. Dynamic Live Sync from Bob's Zero-Cost POS Admin Dashboard (data/churn.json)
+    async function syncLivePOS() {
+      try {
+        const res = await fetch('data/churn.json?t=' + Date.now());
+        if (!res.ok) return;
+        const data = await res.json();
+        
+        // Update live ticker
+        const ticker = document.getElementById('liveTicker');
+        if (ticker && data.liveTicker) {
+          if (!data.liveTicker.active) {
+            ticker.style.display = 'none';
+          } else {
+            ticker.style.display = 'block';
+            ticker.querySelector('.ticker-content').innerHTML = `
+              <span class="pulse-dot"></span>
+              <span>🚨 <strong>LIVE CHURN UPDATE:</strong> Master Builder ${data.liveTicker.builderName} just spun a fresh pan of <span class="ticker-highlight">${data.liveTicker.flavorName}</span> at ${data.liveTicker.spunTime}.</span>
+              <span style="background: rgba(0,0,0,0.3); padding: 2px 10px; border-radius: 99px;">${data.liveTicker.portionsLeft}</span>
+            `;
+          }
+        }
+
+        // Update flavor grid items
+        if (data.menuItems && data.menuItems.length > 0) {
+          const grid = document.getElementById('flavorGrid');
+          if (grid) {
+            grid.innerHTML = '';
+            data.menuItems.forEach(item => {
+              const card = document.createElement('div');
+              card.className = 'flavor-card';
+              card.setAttribute('data-category', item.category);
+              card.innerHTML = `
+                <span class="flavor-badge ${item.badgeType}">${item.badge}</span>
+                <h3 class="flavor-name">${item.name}</h3>
+                <p class="flavor-desc">${item.desc}</p>
+                <div class="flavor-footer">
+                  <span class="status-spun" style="color:${item.status === 'Sold Out' ? '#EF4444' : 'var(--pistachio-sage)'}; font-weight: 800;">● ${item.status === 'Sold Out' ? 'SOLD OUT' : 'Spun ' + item.spunTime}</span>
+                  <span>${item.dietary}</span>
+                </div>
+              `;
+              grid.appendChild(card);
+            });
+          }
+        }
+      } catch(e) {
+        // Fallback gracefully to static HTML if offline preview or fetch error
+      }
+    }
+    syncLivePOS();
   </script>
 
 </body>

@@ -1,0 +1,79 @@
+{
+  "updatedAt": "2026-06-25T14:10:00Z",
+  "liveTicker": {
+    "active": true,
+    "builderName": "Bob Hoxsie",
+    "flavorName": "Amarena Cherry & Dark Valrhona",
+    "spunTime": "2:10 PM",
+    "portionsLeft": "⏱️ 12 Portions Remaining",
+    "urgencyColor": "#FF3B30"
+  },
+  "menuItems": [
+    {
+      "id": "pistachio",
+      "name": "Sicilian Pistachio Perfetto",
+      "category": "heritage",
+      "badge": "Imported Sicilian",
+      "badgeType": "badge-heritage",
+      "desc": "Shun the neon green factory chemicals. Spun from pure, stone-ground Bronte pistachios imported directly from Sicily. Earthy sage color, roasted nutty aroma, and dense velvety silk.",
+      "spunTime": "7:15 AM",
+      "status": "Available",
+      "dietary": "Gluten-Free"
+    },
+    {
+      "id": "stracciatella",
+      "name": "Stracciatella Tradizionale",
+      "category": "heritage",
+      "badge": "Northern Tradition",
+      "badgeType": "badge-heritage",
+      "desc": "The crown jewel of Bergamo. Fresh morning organic California sweet cream slow-churned and drizzled with molten dark Valrhona chocolate that shatters into delicate, crunchy shards upon contact with la spatola.",
+      "spunTime": "8:00 AM",
+      "status": "Available",
+      "dietary": "Customer Favorite"
+    },
+    {
+      "id": "amarena",
+      "name": "Amarena Cherry & Dark Valrhona",
+      "category": "heritage",
+      "badge": "Bolognese Luxury",
+      "badgeType": "badge-heritage",
+      "desc": "Rich fior di latte cream marbled with wild, tart Amarena cherries candied in Bologna, paired with deep French cocoa nibs. A sophisticated balance of sweet creaminess and dark fruit acidity.",
+      "spunTime": "9:30 AM",
+      "status": "Almost Sold Out",
+      "dietary": "Limited Batch"
+    },
+    {
+      "id": "mango",
+      "name": "Pacific Coast Mango Sorbetto",
+      "category": "sorbetto",
+      "badge": "100% Dairy-Free",
+      "badgeType": "badge-sorbetto",
+      "desc": "Zero dairy, zero fat, zero cholesterol. Churned exclusively from ripe Alphonso mangos and pure spring water. Incredibly creamy emulsion that rivals dairy ice cream without weighing down your beach day.",
+      "spunTime": "10:00 AM",
+      "status": "Available",
+      "dietary": "Vegan / GF"
+    },
+    {
+      "id": "honey",
+      "name": "Aliso Canyon Honey & Sea Salt",
+      "category": "sorbetto",
+      "badge": "HB Pier Special",
+      "badgeType": "badge-sorbetto",
+      "desc": "Locally harvested wildflower honey from Orange County canyons folded into buttery caramel gelato, finished with crunchy flakes of Pacific sea salt. The ultimate savory-sweet surf recovery pairing.",
+      "spunTime": "10:30 AM",
+      "status": "Available",
+      "dietary": "Local Harvest"
+    },
+    {
+      "id": "affogato",
+      "name": "The HB LaVazza Affogato",
+      "category": "affogato",
+      "badge": "Surf City Ritual",
+      "badgeType": "badge-affogato",
+      "desc": "A double shot of bold, freshly extracted Italian LaVazza espresso poured steaming hot over two bespoke scoops of Fior di Latte or Double Valrhona Chocolate. Hot meets frozen in sensory perfection.",
+      "spunTime": "Brewed Live",
+      "status": "Available",
+      "dietary": "Morning & Sunset"
+    }
+  ]
+}
