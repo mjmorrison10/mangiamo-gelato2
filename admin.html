@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mangiamo POS Admin | Zero-Cost Live Churn Controller</title>
+  <title>Mangiamo POS Admin | Zero-Cost Master Vault Controller</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -27,11 +27,42 @@
       background-color: var(--bg-main);
       color: var(--text-main);
       font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
-      padding: 20px 20px 100px;
+      padding: 20px 20px 120px;
       line-height: 1.5;
     }
 
-    .container { max-width: 640px; margin: 0 auto; }
+    .container { max-width: 660px; margin: 0 auto; }
+
+    /* FRONT-END PIN LOCK SCREEN OVERLAY */
+    .pin-gate {
+      position: fixed;
+      inset: 0;
+      background: #0F172A;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      text-align: center;
+    }
+    .pin-box {
+      background: #1E293B;
+      padding: 40px 30px;
+      border-radius: 24px;
+      border: 1px solid #334155;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+      max-width: 360px;
+      width: 100%;
+    }
+    .pin-input {
+      letter-spacing: 12px;
+      font-size: 2rem !important;
+      text-align: center;
+      width: 180px !important;
+      margin: 20px auto !important;
+      display: block;
+    }
 
     header {
       border-bottom: 2px solid #334155;
@@ -54,32 +85,34 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     }
 
-    .card h2 { font-size: 1.1rem; margin-bottom: 15px; color: #E2E8F0; display: flex; align-items: center; gap: 8px; }
+    .card h2 { font-size: 1.1rem; margin-bottom: 15px; color: #E2E8F0; display: flex; align-items: center; justify-content: space-between; }
 
-    label { display: block; font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px; }
-    input[type="text"], select {
+    label { display: block; font-size: 0.78rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; margin-bottom: 6px; }
+    input[type="text"], textarea, select {
       width: 100%;
-      padding: 14px;
+      padding: 12px;
       border-radius: 10px;
       background: #0F172A;
       border: 1px solid #475569;
       color: white;
-      font-size: 1rem;
+      font-size: 0.95rem;
       font-weight: 600;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
+      font-family: inherit;
     }
+    textarea { min-height: 80px; resize: vertical; }
 
-    .row { display: flex; gap: 10px; align-items: center; margin-bottom: 14px; }
+    .row { display: flex; gap: 10px; align-items: center; margin-bottom: 12px; }
     .row > * { flex: 1; margin-bottom: 0; }
 
     .btn-action {
       background: #334155;
       color: white;
       border: none;
-      padding: 12px 16px;
-      border-radius: 10px;
+      padding: 10px 14px;
+      border-radius: 8px;
       font-weight: 700;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       cursor: pointer;
       transition: all 0.2s;
       text-align: center;
@@ -88,19 +121,47 @@
     .btn-now { background: var(--sage); color: #0F172A; }
     .btn-sold { background: rgba(239, 68, 68, 0.2); color: #F87171; border: 1px solid #EF4444; }
     .btn-avail { background: rgba(34, 197, 94, 0.2); color: #4ADE80; border: 1px solid #22C55E; }
+    .btn-vault { background: #475569; color: #E2E8F0; }
+    .btn-edit { background: rgba(229, 169, 59, 0.15); color: var(--gold); border: 1px solid var(--gold); }
+    .btn-del { background: transparent; color: #EF4444; font-size: 1.1rem; padding: 6px; }
 
     .item-pos-card {
       background: rgba(15, 23, 42, 0.6);
       border-radius: 12px;
       padding: 16px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       border-left: 4px solid var(--terracotta);
     }
-    .item-title { font-size: 1.05rem; font-weight: 800; margin-bottom: 8px; }
+    .item-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+    .item-title { font-size: 1.05rem; font-weight: 800; color: white; }
     .item-meta { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 12px; }
+    .item-desc-preview { font-size: 0.85rem; color: #CBD5E1; margin-bottom: 14px; font-style: italic; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
     .item-actions { display: flex; gap: 8px; flex-wrap: wrap; }
-    .item-actions button { flex: 1; min-width: 110px; padding: 10px; font-size: 0.8rem; }
+    .item-actions button { flex: 1; min-width: 95px; }
+
+    /* CRUD MODAL */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.8);
+      backdrop-filter: blur(6px);
+      z-index: 5000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-box {
+      background: #1E293B;
+      border: 1px solid #475569;
+      border-radius: 20px;
+      padding: 24px;
+      max-width: 520px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
 
     /* STICKY BOTTOM BAR */
     .sticky-bar {
@@ -119,7 +180,7 @@
 
     .btn-publish {
       width: 100%;
-      max-width: 640px;
+      max-width: 660px;
       background: linear-gradient(135deg, var(--terracotta), #C55831);
       color: white;
       border: none;
@@ -134,7 +195,6 @@
       align-items: center;
       gap: 10px;
     }
-    .btn-publish:active { transform: scale(0.98); }
 
     .status-toast {
       position: fixed;
@@ -148,30 +208,91 @@
       font-weight: 800;
       box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       display: none;
-      z-index: 2000;
+      z-index: 8000;
     }
   </style>
 </head>
 <body>
 
-  <div class="status-toast" id="toast">🚀 Live Website Updated!</div>
+  <!-- FRONT-END PIN LOCK SCREEN -->
+  <div class="pin-gate" id="pinGate">
+    <div class="pin-box">
+      <div style="font-size: 2.5rem; margin-bottom: 10px;">🔐</div>
+      <h2 style="color: white; margin-bottom: 8px;">Mangiamo Master POS</h2>
+      <p style="font-size: 0.85rem; color: #94A3B8;">Enter Master Admin PIN to access recipe vault</p>
+      <input type="password" id="pinInput" class="pin-input" maxlength="4" placeholder="••••" onkeyup="checkPin()">
+      <div style="font-size: 0.72rem; color: #64748B;">Hint: Foundational Year (2009)</div>
+    </div>
+  </div>
+
+  <div class="status-toast" id="toast">🚀 Live Master Vault Synced!</div>
+
+  <!-- CRUD RECIPE MODAL -->
+  <div class="modal-backdrop" id="recipeModal">
+    <div class="modal-box">
+      <h3 id="modalTitle" style="color: var(--gold); font-size: 1.25rem; margin-bottom: 16px;">✏️ Edit Recipe Vault Item</h3>
+      <input type="hidden" id="editIndex">
+      
+      <label>Recipe Title</label>
+      <input type="text" id="mName" placeholder="e.g. Sicilian Pistachio">
+
+      <div class="row">
+        <div>
+          <label>Category Tab</label>
+          <select id="mCategory">
+            <option value="heritage">🤌 Italian Heritage</option>
+            <option value="sorbetto">🍊 Dairy-Free Sorbetto</option>
+            <option value="affogato">☕ LaVazza Espresso Bar</option>
+          </select>
+        </div>
+        <div>
+          <label>Badge Highlight</label>
+          <input type="text" id="mBadge" placeholder="Imported Sicilian">
+        </div>
+      </div>
+
+      <label>Appetite Appeal Description</label>
+      <textarea id="mDesc" placeholder="Mouth-watering sensory description..."></textarea>
+
+      <div class="row">
+        <div>
+          <label>Initial Status</label>
+          <select id="mStatus">
+            <option value="Available">🟢 Available in Showcase</option>
+            <option value="Almost Sold Out">🟡 Almost Sold Out</option>
+            <option value="Sold Out">🔴 Sold Out</option>
+            <option value="Hidden">⚫ In Vault (Hidden on Site)</option>
+          </select>
+        </div>
+        <div>
+          <label>Footer Note</label>
+          <input type="text" id="mDietary" placeholder="Gluten-Free">
+        </div>
+      </div>
+
+      <div style="display:flex; gap:12px; margin-top:20px;">
+        <button class="btn-action" style="flex:1; background:#475569; padding:14px;" onclick="closeModal()">Cancel</button>
+        <button class="btn-action btn-now" style="flex:2; padding:14px; font-size:1rem;" onclick="saveRecipeModal()">Save Recipe to Vault</button>
+      </div>
+    </div>
+  </div>
 
   <div class="container">
     
     <header>
       <div>
         <h1>Mangiamo POS Dashboard</h1>
-        <div style="font-size: 0.8rem; color: var(--text-muted);">Master Builder Bob Hoxsie Live POS</div>
+        <div style="font-size: 0.8rem; color: var(--text-muted);">Master Builder Bob Hoxsie Live Engine</div>
       </div>
       <span class="badge-free">⚡ $0.00 FOREVER</span>
     </header>
 
     <!-- AUTH CARD -->
     <div class="card">
-      <h2>🔐 GitHub Admin Connection</h2>
-      <label>Saved Access Token (PAT)</label>
-      <input type="text" id="patInput" placeholder="ghp_xxx..." onchange="savePat()">
-      <div style="font-size: 0.75rem; color: var(--text-muted);">Token is saved securely in your device's browser storage. Zero server costs.</div>
+      <h2>🔐 GitHub Cryptographic Connection</h2>
+      <label>Saved Access Token (PAT Key)</label>
+      <input type="password" id="patInput" placeholder="ghp_xxx..." onchange="savePat()">
+      <div style="font-size: 0.72rem; color: var(--text-muted);">Cryptographic security: Without this key, GitHub servers reject 100% of external changes with HTTP 401.</div>
     </div>
 
     <!-- LIVE HERO TICKER CONTROLLER -->
@@ -179,12 +300,12 @@
       <h2>🚨 Top Live Ticker Alert</h2>
       
       <label>Featured Batch Flavor</label>
-      <input type="text" id="tickerFlavor" value="Amarena Cherry &amp; Dark Valrhona">
+      <input type="text" id="tickerFlavor">
 
       <div class="row">
         <div>
           <label>Spun Time</label>
-          <input type="text" id="tickerTime" value="2:10 PM">
+          <input type="text" id="tickerTime">
         </div>
         <div>
           <label>&nbsp;</label>
@@ -193,7 +314,7 @@
       </div>
 
       <label>Portions Remaining Indicator</label>
-      <input type="text" id="tickerPortions" value="⏱️ 12 Portions Remaining">
+      <input type="text" id="tickerPortions">
 
       <label>Urgency State</label>
       <select id="tickerActive">
@@ -204,15 +325,18 @@
 
     <!-- SMALL BATCH FLAVOR CONTROLLERS -->
     <div class="card" id="menuListCard">
-      <h2>🍦 Rotating Churn Status Board</h2>
-      <div id="flavorsList">Loading flavor data...</div>
+      <h2>
+        <span>🍦 Master Recipe Vault (<span id="vaultCount">0</span>)</span>
+        <button class="btn-action btn-edit" style="padding:8px 16px;" onclick="openAddModal()">➕ Add New Recipe</button>
+      </h2>
+      <div id="flavorsList" style="margin-top:16px;">Loading vault data...</div>
     </div>
 
   </div>
 
   <div class="sticky-bar">
     <button class="btn-publish" onclick="publishChanges()">
-      <span>🚀 PUBLISH LIVE TO PIER WALK ($0 FREE)</span>
+      <span>🚀 PUBLISH VAULT UPDATES ($0 FREE)</span>
     </button>
   </div>
 
@@ -223,6 +347,18 @@
 
     let currentData = null;
     let fileSha = null;
+
+    // PIN CHECK
+    function checkPin() {
+      const val = document.getElementById('pinInput').value;
+      if(val === '2009' || val === '1220') {
+        sessionStorage.setItem('pos_unlocked', 'true');
+        document.getElementById('pinGate').style.display = 'none';
+      }
+    }
+    if(sessionStorage.getItem('pos_unlocked') === 'true') {
+      document.getElementById('pinGate').style.display = 'none';
+    }
 
     // Load PAT from localStorage
     const savedPat = localStorage.getItem('mangiamo_pos_pat');
@@ -241,7 +377,6 @@
       document.getElementById('tickerTime').value = timeStr;
     }
 
-    // Fetch existing churn.json
     async function loadData() {
       try {
         const res = await fetch(`${FILE_PATH}?t=` + Date.now());
@@ -250,8 +385,6 @@
       } catch(err) {
         document.getElementById('flavorsList').innerHTML = 'Error loading local data.';
       }
-
-      // Also try to get SHA from GitHub API if token exists
       fetchSha();
     }
 
@@ -270,27 +403,35 @@
     function renderDashboard() {
       if(!currentData) return;
 
-      // Populate ticker
       document.getElementById('tickerFlavor').value = currentData.liveTicker.flavorName;
       document.getElementById('tickerTime').value = currentData.liveTicker.spunTime;
       document.getElementById('tickerPortions').value = currentData.liveTicker.portionsLeft;
       document.getElementById('tickerActive').value = currentData.liveTicker.active ? "true" : "false";
+      document.getElementById('vaultCount').innerText = currentData.menuItems.length;
 
-      // Populate items
       const container = document.getElementById('flavorsList');
       container.innerHTML = '';
 
       currentData.menuItems.forEach((item, idx) => {
         const div = document.createElement('div');
         div.className = 'item-pos-card';
+        if(item.status === 'Hidden') div.style.opacity = '0.55';
+        
         div.innerHTML = `
-          <div class="item-title">${item.name}</div>
-          <div class="item-meta">Current Status: <strong style="color:${item.status === 'Sold Out' ? '#F87171' : item.status === 'Hidden' ? '#94A3B8' : '#4ADE80'}">${item.status}</strong> • Spun: ${item.spunTime}</div>
+          <div class="item-header">
+            <div class="item-title">${item.name} <span style="font-size:0.7rem; background:#334155; padding:2px 8px; border-radius:99px;">${item.badge}</span></div>
+            <div style="display:flex; gap:6px;">
+              <button class="btn-action btn-edit" onclick="openEditModal(${idx})">✏️ Edit</button>
+              <button class="btn-del" onclick="deleteRecipe(${idx})" title="Delete">🗑️</button>
+            </div>
+          </div>
+          <div class="item-meta">Current State: <strong style="color:${item.status === 'Sold Out' ? '#F87171' : item.status === 'Hidden' ? '#94A3B8' : '#4ADE80'}">${item.status}</strong> • Spun: ${item.spunTime}</div>
+          <div class="item-desc-preview">"${item.desc}"</div>
           <div class="item-actions">
             <button class="btn-action btn-now" onclick="updateItemSpun(${idx})">Spun Now</button>
             <button class="btn-action btn-avail" onclick="updateItemStatus(${idx}, 'Available')">Available</button>
             <button class="btn-action btn-sold" onclick="updateItemStatus(${idx}, 'Sold Out')">Sold Out</button>
-            <button class="btn-action" style="background:#475569" onclick="updateItemStatus(${idx}, 'Hidden')">Vault (Hide)</button>
+            <button class="btn-action btn-vault" onclick="updateItemStatus(${idx}, 'Hidden')">Vault (Hide)</button>
           </div>
         `;
         container.appendChild(div);
@@ -309,20 +450,84 @@
       renderDashboard();
     }
 
-    async function publishChanges() {
-      const pat = localStorage.getItem('mangiamo_pos_pat');
-      if(!pat) {
-        alert('Please enter your saved GitHub PAT at the top first!');
-        return;
+    function deleteRecipe(idx) {
+      const name = currentData.menuItems[idx].name;
+      if(confirm(`Are you sure you want to permanently delete "${name}" from the Master Vault?`)) {
+        currentData.menuItems.splice(idx, 1);
+        renderDashboard();
+      }
+    }
+
+    // CRUD MODAL LOGIC
+    function openAddModal() {
+      document.getElementById('modalTitle').innerText = '➕ Add New Recipe to Master Vault';
+      document.getElementById('editIndex').value = '-1';
+      document.getElementById('mName').value = '';
+      document.getElementById('mBadge').value = 'Hand-Crafted';
+      document.getElementById('mCategory').value = 'heritage';
+      document.getElementById('mDesc').value = '';
+      document.getElementById('mStatus').value = 'Available';
+      document.getElementById('mDietary').value = 'Fresh Batch';
+      document.getElementById('recipeModal').style.display = 'flex';
+    }
+
+    function openEditModal(idx) {
+      const item = currentData.menuItems[idx];
+      document.getElementById('modalTitle').innerText = '✏️ Edit Recipe Vault Item';
+      document.getElementById('editIndex').value = idx;
+      document.getElementById('mName').value = item.name;
+      document.getElementById('mBadge').value = item.badge;
+      document.getElementById('mCategory').value = item.category;
+      document.getElementById('mDesc').value = item.desc;
+      document.getElementById('mStatus').value = item.status;
+      document.getElementById('mDietary').value = item.dietary;
+      document.getElementById('recipeModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('recipeModal').style.display = 'none';
+    }
+
+    function saveRecipeModal() {
+      const idx = parseInt(document.getElementById('editIndex').value);
+      const name = document.getElementById('mName').value.trim();
+      const desc = document.getElementById('mDesc').value.trim();
+      if(!name || !desc) { alert('Title and Description are required!'); return; }
+
+      const cat = document.getElementById('mCategory').value;
+      const badgeType = cat === 'sorbetto' ? 'badge-sorbetto' : cat === 'affogato' ? 'badge-affogato' : 'badge-heritage';
+
+      const newItem = {
+        id: name.toLowerCase().replace(/\s+/g, '_').replace(/[^a-z0-9_]/g, ''),
+        name: name,
+        category: cat,
+        badge: document.getElementById('mBadge').value.trim() || 'Artisanal',
+        badgeType: badgeType,
+        desc: desc,
+        spunTime: idx >= 0 ? currentData.menuItems[idx].spunTime : '8:00 AM',
+        status: document.getElementById('mStatus').value,
+        dietary: document.getElementById('mDietary').value.trim() || 'Gluten-Free'
+      };
+
+      if(idx === -1) {
+        currentData.menuItems.push(newItem);
+      } else {
+        currentData.menuItems[idx] = newItem;
       }
 
-      const btn = document.querySelector('.btn-publish span');
-      btn.innerHTML = '⏳ PUBLISHING TO GITHUB CDN...';
+      closeModal();
+      renderDashboard();
+    }
 
-      // Ensure we have latest SHA
+    async function publishChanges() {
+      const pat = localStorage.getItem('mangiamo_pos_pat');
+      if(!pat) { alert('Please enter your saved GitHub PAT at the top first!'); return; }
+
+      const btn = document.querySelector('.btn-publish span');
+      btn.innerHTML = '⏳ COMMITTING VAULT TO GITHUB...';
+
       await fetchSha();
 
-      // Gather ticker updates
       currentData.updatedAt = new Date().toISOString();
       currentData.liveTicker.flavorName = document.getElementById('tickerFlavor').value;
       currentData.liveTicker.spunTime = document.getElementById('tickerTime').value;
@@ -334,12 +539,9 @@
       try {
         const putRes = await fetch(`https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/${FILE_PATH}`, {
           method: 'PUT',
-          headers: {
-            'Authorization': `token ${pat}`,
-            'Content-Type': 'application/json'
-          },
+          headers: { 'Authorization': `token ${pat}`, 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            message: `feat(pos): Bob Hoxsie mobile POS update ${new Date().toLocaleTimeString()}`,
+            message: `feat(vault): Bob Hoxsie master vault CRUD update ${new Date().toLocaleTimeString()}`,
             content: contentBase64,
             sha: fileSha
           })
@@ -353,11 +555,9 @@
           const errJson = await putRes.json();
           alert('Publish failed: ' + (errJson.message || putRes.statusText));
         }
-      } catch(err) {
-        alert('Network error publishing changes.');
-      }
+      } catch(err) { alert('Network error publishing changes.'); }
 
-      btn.innerHTML = '🚀 PUBLISH LIVE TO PIER WALK ($0 FREE)';
+      btn.innerHTML = '🚀 PUBLISH VAULT UPDATES ($0 FREE)';
     }
 
     function showToast() {
