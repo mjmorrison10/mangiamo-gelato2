@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-25T14:10:00Z",
+  "updatedAt": "2026-06-26T19:42:15.081Z",
   "liveTicker": {
     "active": true,
     "builderName": "Bob Hoxsie",
@@ -16,7 +16,7 @@
       "badge": "Imported Sicilian",
       "badgeType": "badge-heritage",
       "desc": "Shun the neon green factory chemicals. Spun from pure, stone-ground Bronte pistachios imported directly from Sicily. Earthy sage color, roasted nutty aroma, and dense velvety silk.",
-      "spunTime": "7:15 AM",
+      "spunTime": "12:41 PM",
       "status": "Available",
       "dietary": "Gluten-Free"
     },
@@ -162,6 +162,17 @@
       "spunTime": "Brewed Live",
       "status": "Available",
       "dietary": "Morning & Sunset"
+    },
+    {
+      "id": "test",
+      "name": "Test",
+      "category": "heritage",
+      "badge": "Hand-Crafted",
+      "badgeType": "badge-heritage",
+      "desc": "Test",
+      "spunTime": "8:00 AM",
+      "status": "Available",
+      "dietary": "Fresh Batch"
     }
   ]
 }
