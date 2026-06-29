@@ -398,36 +398,29 @@
     </div>
   </section>
 
-  <!-- P0: EMAIL CAPTURE FUNNEL (ABOVE THE FOLD) -->
+  <!-- P0: EMAIL & SMS CAPTURE FUNNEL (ABOVE THE FOLD) -->
   <section class="email-section" id="emailJoin">
     <div class="container email-grid">
       <div class="email-content">
-        <span style="color: var(--gold); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1.5px;">📬 Owned Audience &amp; VIP Lead Magnet</span>
+        <div style="background: rgba(255,255,255,0.08); padding: 6px 14px; border-radius: 99px; font-size: 0.78rem; font-weight: 800; color: #4ADE80; display: inline-block; margin-bottom: 12px; border: 1px solid rgba(74, 222, 128, 0.3);">
+          ☀️ LIVE SURF CITY FORECAST: 82°F Golden Sun • Perfect Sorbetto Weather
+        </div>
         <h3>Join the 7:00 AM Secret Churn Club</h3>
-        <p>Our small batches sell out fast. Drop your email to get today's secret recipe drops sent to your phone + an immediate <strong>$2 Off Pier Walk Welcome Pass</strong>.</p>
+        <p>Our small batches sell out fast. Drop your contact info below to receive today’s secret recipe drops + an immediate <strong>$2 Off Pier Walk Welcome Pass</strong>.</p>
       </div>
       <div>
-        <form
-          class="email-form"
-          id="vipEmailForm"
-          onsubmit="handleVipSignup(event)"
-          data-mcp-action="claim-welcome-pass"
-          data-mcp-description="Instantly claim a $2 Off Pier Walk Welcome Pass and subscribe to secret morning recipe drops for Mangiamo Gelato Caffe"
-          data-mcp-params='{"required":["email"],"optional":[]}'
-        >
-          <input
-            type="email"
-            id="vipEmailInput"
-            name="email"
-            class="email-input"
-            placeholder="Enter your email for $2 Welcome Pass..."
-            data-mcp-param="email"
-            data-mcp-description="Customer email address to receive immediate $2 discount pass"
-            required
-          >
-          <button type="submit" class="btn-email-submit">Unlock $2 Welcome Pass</button>
+        <form class="email-form" id="vipEmailForm" onsubmit="handleVipSignup(event)" data-mcp-action="claim-welcome-pass" style="flex-direction: column; gap: 12px;">
+          <div style="display: flex; gap: 10px; flex-wrap: wrap; width: 100%;">
+            <input type="email" id="vipEmailInput" class="email-input" placeholder="Enter email for $2 Pass..." required style="flex: 1.5; min-width: 220px;">
+            <input type="tel" id="vipSmsInput" class="email-input" placeholder="Mobile # for SMS drops (Opt)..." style="flex: 1; min-width: 180px;">
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; font-size: 0.8rem; color: #CBD5E1;">
+            <input type="checkbox" id="smsConsent" checked style="width: 18px; height: 18px; accent-color: var(--terracotta);">
+            <label for="smsConsent" style="color: #CBD5E1; text-transform: none; margin-bottom: 0; font-size: 0.82rem;">Include instant rainy Tuesday warm affogato text alerts &amp; secret BOGO drops (Max 2x/mo).</label>
+          </div>
+          <button type="submit" class="btn-email-submit" style="width: 100%; padding: 18px; font-size: 1.05rem;">Unlock Immediate $2 Pier Welcome Pass</button>
         </form>
-        <div class="email-subtext" id="emailStatusText">⚡ Instant delivery • Includes rainy day warm affogato alerts &amp; secret menu access • Zero spam.</div>
+        <div class="email-subtext" id="emailStatusText">⚡ Instant barcode delivery • Includes VIP loyalty upgrades &amp; secret recipe vault access • Zero spam.</div>
       </div>
     </div>
   </section>
@@ -689,6 +682,30 @@
     </div>
   </section>
 
+  <!-- UPGRADE 2: INSTANT POP-UP DIGITAL WELCOME PASS & STORY MODAL -->
+  <div id="passModal" style="position: fixed; inset: 0; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 9999; display: none; align-items: center; justify-content: center; padding: 20px;">
+    <div style="background: white; color: var(--text-main); border-radius: 24px; max-width: 480px; width: 100%; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); border: 4px solid var(--gold); animation: popScale 0.3s cubic-bezier(0.16, 1, 0.3, 1);">
+      <div style="background: var(--navy); color: white; padding: 24px; text-align: center; position: relative;">
+        <span style="background: var(--terracotta); color: white; padding: 4px 12px; border-radius: 99px; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">🎉 VIP Welcome Pass #1</span>
+        <h3 style="color: white; font-size: 1.5rem; margin-top: 6px;">$2 Off Any Cup Tier</h3>
+        <p style="color: var(--gold); font-size: 0.85rem; font-weight: 700;">Valid Today at 122 Main Street</p>
+        <button onclick="document.getElementById('passModal').style.display='none'" style="position: absolute; top: 16px; right: 16px; background: rgba(255,255,255,0.2); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; font-weight: 800; cursor: pointer;">✕</button>
+      </div>
+      <div style="padding: 26px; text-align: center;">
+        <p style="font-size: 0.95rem; color: var(--text-main); margin-bottom: 18px;">"Welcome to our gelateria family. Skip the commercial freezer lines up the block. Show this screen or barcode at the register today for $2 off your initial small-batch pairing."</p>
+        <!-- Barcode Simulation -->
+        <div style="background: #F1F5F9; padding: 18px; border-radius: 12px; border: 2px dashed #CBD5E1; margin-bottom: 20px;">
+          <div style="font-family: monospace; letter-spacing: 6px; font-size: 1.4rem; font-weight: 800; color: #0F172A;">||| | |||| || | |||</div>
+          <div style="font-size: 0.78rem; font-weight: 800; color: var(--terracotta); margin-top: 4px;" id="modalEmailDisplay">VIP PASS: DAVE@SURF.COM</div>
+        </div>
+        <div style="display: flex; gap: 10px;">
+          <a href="#guide" onclick="document.getElementById('passModal').style.display='none'" class="btn btn-terracotta" style="flex: 1; padding: 14px; font-size: 0.9rem;">📍 Walk (~100 Steps)</a>
+          <button onclick="document.getElementById('passModal').style.display='none'" class="btn btn-outline" style="flex: 1; padding: 14px; font-size: 0.9rem;">Save To Apple Wallet</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
@@ -740,24 +757,29 @@
     async function handleVipSignup(event) {
       event.preventDefault();
       const email = document.getElementById('vipEmailInput').value;
+      const sms = document.getElementById('vipSmsInput') ? document.getElementById('vipSmsInput').value : '';
       const statusEl = document.getElementById('emailStatusText');
       const btn = document.querySelector('.btn-email-submit');
       
-      btn.innerHTML = '⏳ Unlocking $2 Pass...';
+      btn.innerHTML = '⏳ Generating Digital Pass...';
       
-      // Asynchronous Webhook Hook Simulation (ready to connect to Google Sheets / Zapier / Make / Brevo)
       try {
         await fetch('https://formspree.io/f/simulation_endpoint', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email: email, source: 'HB Pier Walk VIP Club', time: new Date().toISOString() })
-        }).catch(e => {}); // Ignore network simulation error
+          body: JSON.stringify({ email: email, sms: sms, source: 'HB Pier Walk VIP Club', time: new Date().toISOString() })
+        }).catch(e => {});
       } catch(err) {}
 
       document.getElementById('vipEmailForm').style.display = 'none';
-      statusEl.innerHTML = `🎉 <strong>VIP PASS UNLOCKED!</strong> We sent your immediate $2 Off Pier Welcome Pass code to <u>${email}</u>. Show your inbox screen at the counter today.`;
+      statusEl.innerHTML = `🎉 <strong>VIP PASS UNLOCKED!</strong> Barcode pass generated for <u>${email}</u>.`;
       statusEl.style.color = '#4ADE80';
       statusEl.style.fontSize = '0.95rem';
+
+      // Launch Digital Welcome Modal
+      const modalEmailEl = document.getElementById('modalEmailDisplay');
+      if(modalEmailEl) modalEmailEl.innerText = 'VIP PASS: ' + email.toUpperCase();
+      document.getElementById('passModal').style.display = 'flex';
     }
 
     async function syncLivePOS() {
