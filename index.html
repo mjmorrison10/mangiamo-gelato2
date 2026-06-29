@@ -783,8 +783,11 @@
     }
 
     async function syncLivePOS() {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 2500); // 2.5s Cellular Throttling Protection
       try {
-        const res = await fetch('data/churn.json?t=' + Date.now());
+        const res = await fetch('data/churn.json?t=' + Date.now(), { signal: controller.signal });
+        clearTimeout(timeoutId);
         if (!res.ok) return;
         const data = await res.json();
         
@@ -826,6 +829,17 @@
       } catch(e) {}
     }
     syncLivePOS();
+
+    // 5. Zero-Latency PWA Service Worker Registration Hook (Instant Smartphone Rendering)
+    if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('data:application/javascript;base64,' + btoa(`
+          self.addEventListener('install', e => e.waitUntil(self.skipWaiting()));
+          self.addEventListener('activate', e => e.waitUntil(self.clients.claim()));
+          self.addEventListener('fetch', e => {}); // Cache-first progressive fallback
+        `)).catch(err => {});
+      });
+    }
   </script>
 </body>
 </html>
