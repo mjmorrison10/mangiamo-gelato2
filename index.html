@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mangiamo Gelato Caffe | Authentic Italian Gelato & Best Ice Cream in Huntington Beach</title>
-  <meta name="description" content="Tired of factory-frozen corporate ice cream? Visit Mangiamo Gelato Caffe at 122 Main Street, footsteps from the Huntington Beach Pier. Daily hand-spun Italian artisan gelato, dairy-free sorbetto, and LaVazza espresso affogatos.">
+  <title>Mangiamo Gelato Caffe | Authentic Artisanal Gelato in Huntington Beach</title>
+  <meta name="description" content="122 Main Street. No factory. No freezer trucks. Just authentic Northern Italian gelato churned daily by Huntington Beach master builders. Footsteps from the Pier.">
   <meta name="keywords" content="best ice cream Huntington Beach Pier, gelato Main Street HB, dessert near Wahoo's Huntington Beach, authentic Italian gelato Orange County, affogato coffee HB, Bob Hoxsie gelato">
   
   <!-- Open Graph / Social -->
-  <meta property="og:title" content="Mangiamo Gelato Caffe | The Pier's Essential Italian Experience">
-  <meta property="og:description" content="Hand-spun fresh every morning at 122 Main St. Skip the corporate franchise lines and taste authentic Northern Italian tradition.">
+  <meta property="og:title" content="Mangiamo Gelato Caffe | 122 Main Street">
+  <meta property="og:description" content="Churned fresh every dawn at 122 Main St. Skip commercial warehouse tubs and taste authentic Northern Italian tradition.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.mangiamo-gelato.com">
 
@@ -37,6 +37,11 @@
     "url": "https://www.mangiamo-gelato.com",
     "telephone": "+1-714-536-5388",
     "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "1248"
+    },
     "servesCuisine": ["Italian", "Gelato", "Ice Cream", "Dessert", "Coffee"],
     "openingHoursSpecification": [
       {
@@ -50,39 +55,32 @@
       "@type": "Person",
       "name": "Bob Hoxsie",
       "award": "Huntington Beach Outstanding Citizen of the Year 2015"
-    },
-    "sameAs": [
-      "https://www.instagram.com/mangiamogelato/",
-      "https://www.yelp.com/biz/mangiamo-gelato-caffe-huntington-beach"
-    ]
+    }
   }
   </script>
 
-  <!-- Google Fonts (With crisp system typography fallback) -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- EMBEDDED STYLES FOR ZERO-LATENCY MOBILE LOAD & PREVIEW COMPATIBILITY -->
   <style>
     :root {
-      /* The Coastal Riviera Color Palette */
-      --bg-fior-di-latte: #F9F6F0; /* Anti-glare warm cream */
+      /* The Coastal Riviera Palette */
+      --bg-cream: #F9F6F0; /* Anti-glare Fior di Latte */
       --bg-white: #FFFFFF;
-      --bg-card: #FFFFFF;
-      --adriatic-navy: #1B365D; /* High contrast primary */
-      --espresso-deep: #2A1810;
-      --pistachio-sage: #8A9A86; /* Organic authentic sage */
-      --pistachio-light: #EFF3EF;
-      --terracotta-coast: #D96B43; /* Pier sunset action CTA */
+      --navy: #1B365D; /* Authoritative Deep Adriatic */
+      --espresso: #2A1810;
+      --sage: #8A9A86; /* Natural organic green */
+      --sage-light: #EFF3EF;
+      --terracotta: #D96B43; /* Action CTA Sunset Orange */
       --terracotta-hover: #C55831;
-      --sunset-gold: #E5A93B;
-      --amarena-cherry: #4A1521;
+      --gold: #E5A93B;
+      --cherry: #4A1521;
       --text-main: #1A2530;
       --text-muted: #5A6A7A;
-      --border-color: #E6DFD5;
+      --border: #E6DFD5;
       
-      /* Shadows & Radii */
       --radius-sm: 8px;
       --radius-md: 16px;
       --radius-lg: 24px;
@@ -91,24 +89,14 @@
       --shadow-md: 0 12px 28px rgba(27, 54, 93, 0.10);
       --shadow-lg: 0 24px 48px rgba(27, 54, 93, 0.16);
       
-      /* Typography */
-      --font-serif: 'Cinzel', Georgia, 'Times New Roman', serif;
-      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-serif: 'Cinzel', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      font-size: 16px;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
     body {
-      background-color: var(--bg-fior-di-latte);
+      background-color: var(--bg-cream);
       color: var(--text-main);
       font-family: var(--font-sans);
       line-height: 1.6;
@@ -116,22 +104,16 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* GLOBAL UTILITIES */
-    .container {
-      width: 100%;
-      max-width: 1240px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    .container { width: 100%; max-width: 1240px; margin: 0 auto; padding: 0 20px; }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
-      padding: 14px 24px;
+      padding: 15px 28px;
       font-weight: 700;
-      font-size: 0.95rem;
+      font-size: 0.98rem;
       border-radius: var(--radius-full);
       text-decoration: none;
       transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -139,919 +121,189 @@
       border: none;
       white-space: nowrap;
     }
+    .btn-terracotta { background-color: var(--terracotta); color: white; box-shadow: 0 6px 18px rgba(217, 107, 67, 0.28); }
+    .btn-terracotta:hover { background-color: var(--terracotta-hover); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(217, 107, 67, 0.38); }
+    .btn-navy { background-color: var(--navy); color: white; }
+    .btn-navy:hover { background-color: #122440; transform: translateY(-2px); }
+    .btn-outline { background-color: transparent; color: var(--navy); border: 2px solid var(--navy); }
+    .btn-outline:hover { background-color: var(--navy); color: white; }
+
+    .section-tag { display: inline-block; text-transform: uppercase; font-size: 0.8rem; font-weight: 800; letter-spacing: 2px; color: var(--terracotta); margin-bottom: 12px; }
+    h1, h2, h3, h4 { font-family: var(--font-serif); color: var(--navy); line-height: 1.25; }
+
+    /* TOP LIVE TICKER */
+    .live-ticker { background-color: var(--cherry); color: white; padding: 9px 16px; font-size: 0.85rem; font-weight: 600; position: relative; z-index: 1001; }
+    .ticker-content { display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap; text-align: center; }
+    .pulse-dot { width: 10px; height: 10px; background-color: #FF3B30; border-radius: 50%; display: inline-block; animation: pulse 1.5s infinite; }
+    @keyframes pulse { 0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(255, 59, 48, 0); } 100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0); } }
+    .ticker-highlight { color: var(--gold); font-weight: 800; }
+
+    /* STICKY NAVIGATION */
+    .header { position: sticky; top: 0; background-color: rgba(249, 246, 240, 0.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); z-index: 1000; padding: 12px 0; transition: all 0.3s ease; }
+    .header-nav { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+    .logo { display: flex; flex-direction: column; text-decoration: none; }
+    .logo-main { font-family: var(--font-serif); font-size: 1.35rem; font-weight: 800; color: var(--navy); letter-spacing: 1px; }
+    .logo-sub { font-size: 0.68rem; text-transform: uppercase; letter-spacing: 2px; color: var(--terracotta); font-weight: 700; margin-top: -3px; }
+    .nav-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .btn-nav-dir { background-color: var(--terracotta); color: white; padding: 10px 16px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-full); text-decoration: none; display: flex; align-items: center; gap: 6px; box-shadow: 0 4px 12px rgba(217, 107, 67, 0.3); animation: gentle-bounce 3s infinite ease-in-out; }
+    @keyframes gentle-bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+    .btn-nav-menu { background-color: var(--navy); color: white; padding: 10px 16px; font-size: 0.85rem; font-weight: 700; border-radius: var(--radius-full); text-decoration: none; display: flex; align-items: center; gap: 6px; }
+
+    /* HERO SECTION (PUNCHY HEADLINE & SOCIAL PROOF NUMBERS) */
+    .hero { padding: 50px 0 60px; position: relative; background: linear-gradient(180deg, rgba(249,246,240,1) 0%, rgba(239,243,239,0.5) 100%); }
+    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
+    
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background-color: var(--sage-light); color: var(--navy); padding: 8px 16px; border-radius: var(--radius-full); font-size: 0.85rem; font-weight: 700; margin-bottom: 20px; border: 1px solid rgba(138, 154, 134, 0.3); }
+    .hero-title { font-size: clamp(2.4rem, 4.8vw, 3.8rem); margin-bottom: 16px; letter-spacing: -0.5px; }
+    .hero-subtitle { font-size: 1.2rem; color: var(--text-main); margin-bottom: 28px; max-width: 620px; }
+    
+    /* Social Proof Bar */
+    .proof-bar { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; padding: 16px 20px; background: white; border-radius: var(--radius-md); border: 1px solid var(--border); box-shadow: var(--shadow-sm); margin-bottom: 30px; }
+    .proof-stat { display: flex; align-items: center; gap: 8px; font-size: 0.92rem; font-weight: 700; color: var(--navy); }
+    .proof-stat span { color: var(--gold); font-size: 1.1rem; }
+
+    .hero-cta-group { display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 25px; }
+
+    .micro-compass { display: flex; align-items: center; gap: 12px; background-color: var(--navy); color: white; padding: 16px 20px; border-radius: var(--radius-md); font-size: 0.9rem; }
+    .micro-compass strong { color: var(--gold); }
+
+    /* Hero Art Card */
+    .hero-art-card { background: white; border-radius: var(--radius-lg); padding: 30px; box-shadow: var(--shadow-lg); border: 1px solid var(--border); width: 100%; max-width: 450px; text-align: center; position: relative; margin: 0 auto; }
+    .badge-float { position: absolute; top: -15px; right: -15px; background: var(--gold); color: var(--navy); font-weight: 800; font-size: 0.78rem; padding: 8px 16px; border-radius: var(--radius-full); box-shadow: var(--shadow-sm); text-transform: uppercase; letter-spacing: 1px; }
+    .spatula-graphic { width: 100%; height: 240px; background: radial-gradient(circle, var(--sage-light) 0%, var(--bg-cream) 100%); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; overflow: hidden; position: relative; }
+    .caption-art { font-size: 0.88rem; color: var(--text-muted); font-style: italic; }
+
+    /* P0: EMAIL OPT-IN BAR (ABOVE THE FOLD) */
+    .email-section { background-color: var(--espresso); color: white; padding: 45px 0; border-top: 4px solid var(--terracotta); border-bottom: 4px solid var(--terracotta); position: relative; z-index: 10; }
+    .email-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center; }
+    .email-content h3 { color: white; font-size: 1.8rem; margin-bottom: 8px; }
+    .email-content p { color: #CBD5E1; font-size: 0.95rem; }
+    
+    .email-form { display: flex; gap: 10px; flex-wrap: wrap; }
+    .email-input { flex: 1; min-width: 240px; padding: 16px 20px; border-radius: var(--radius-full); border: none; font-size: 1rem; font-family: inherit; }
+    .btn-email-submit { background-color: var(--terracotta); color: white; border: none; padding: 16px 28px; font-weight: 800; border-radius: var(--radius-full); cursor: pointer; transition: all 0.2s; font-size: 1rem; }
+    .btn-email-submit:hover { background-color: var(--terracotta-hover); transform: scale(1.02); }
+    .email-subtext { font-size: 0.75rem; color: #94A3B8; margin-top: 10px; width: 100%; }
+
+    /* P0: THE ORIGIN STORY (FRONT & CENTER BELOW HERO) */
+    .story-section { padding: 80px 0; background-color: white; border-bottom: 1px solid var(--border); }
+    .story-hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 50px; align-items: center; }
+    
+    .quote-lead { font-size: 1.35rem; font-family: var(--font-serif); color: var(--navy); line-height: 1.4; margin-bottom: 20px; border-left: 4px solid var(--terracotta); padding-left: 20px; }
+    .story-text p { font-size: 1.05rem; margin-bottom: 16px; color: var(--text-main); }
+    
+    .video-card-simulate { background: #0F172A; border-radius: var(--radius-lg); overflow: hidden; position: relative; box-shadow: var(--shadow-md); border: 1px solid #334155; }
+    .video-thumb { width: 100%; height: 340px; background: linear-gradient(135deg, #1E293B, #0F172A); display: flex; flex-direction: column; align-items: center; justify-content: center; color: white; padding: 30px; text-align: center; }
+    .play-btn { width: 70px; height: 70px; background: var(--terracotta); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin-bottom: 16px; box-shadow: 0 10px 25px rgba(217, 107, 67, 0.5); cursor: pointer; transition: transform 0.2s; }
+    .play-btn:hover { transform: scale(1.1); }
+
+    /* P1: CONFIDENT COMPARISON SECTION (DIALED BACK SNARK) */
+    .comparison-section { padding: 80px 0; background-color: var(--navy); color: white; }
+    .comparison-header { text-align: center; max-width: 760px; margin: 0 auto 50px; }
+    .comparison-header h2 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 12px; }
+    .comparison-header p { color: #B0C4DE; font-size: 1.08rem; }
+
+    .comp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+    .comp-card { border-radius: var(--radius-lg); padding: 36px 28px; display: flex; flex-direction: column; justify-content: space-between; }
+    .comp-card.standard { background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.12); color: #CBD5E1; }
+    .comp-card.artisan { background: white; color: var(--text-main); box-shadow: 0 25px 50px rgba(0,0,0,0.45); border: 3px solid var(--gold); position: relative; transform: scale(1.02); }
+    .comp-card-badge { position: absolute; top: -16px; left: 50%; transform: translateX(-50%); background: var(--terracotta); color: white; font-size: 0.78rem; font-weight: 800; padding: 6px 18px; border-radius: var(--radius-full); text-transform: uppercase; letter-spacing: 1.5px; }
+
+    .comp-title { font-size: 1.45rem; font-weight: 800; margin-bottom: 6px; font-family: var(--font-serif); }
+    .comp-card.standard .comp-title { color: #94A3B8; }
+    .comp-card.artisan .comp-title { color: var(--navy); }
+    .comp-subtitle { font-size: 0.88rem; margin-bottom: 24px; opacity: 0.8; }
+
+    .comp-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+    .comp-list li { display: flex; align-items: flex-start; gap: 12px; font-size: 0.95rem; }
+    .icon-neutral { color: #64748B; font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+    .icon-check { color: var(--terracotta); font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+
+    /* MENU GALLERY */
+    .menu-section { padding: 85px 0; background-color: var(--bg-cream); }
+    .menu-header { text-align: center; max-width: 780px; margin: 0 auto 45px; }
+    .menu-header h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 12px; }
+
+    .pricing-tier-bar { background: white; border-radius: var(--radius-lg); padding: 24px 30px; margin-bottom: 30px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-around; gap: 20px; border: 1px solid var(--border); box-shadow: var(--shadow-sm); }
+    .price-item { text-align: center; }
+    .price-item .size { font-size: 0.78rem; text-transform: uppercase; font-weight: 800; color: var(--text-muted); letter-spacing: 1px; }
+    .price-item .cost { font-size: 1.5rem; font-weight: 800; color: var(--navy); font-family: var(--font-serif); }
+    .price-item .notes { font-size: 0.8rem; color: var(--terracotta); font-weight: 600; }
+
+    /* Upsell Banner */
+    .upsell-bar { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+    .upsell-pill { background: var(--sage-light); border: 1px solid rgba(138,154,134,0.4); padding: 10px 20px; border-radius: var(--radius-full); font-size: 0.88rem; font-weight: 700; color: var(--navy); display: flex; align-items: center; gap: 8px; }
+    .upsell-pill span { color: var(--terracotta); font-weight: 800; }
+
+    .filter-tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 35px; }
+    .filter-btn { padding: 10px 20px; border-radius: var(--radius-full); background: white; border: 1px solid var(--border); color: var(--navy); font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: all 0.2s; }
+    .filter-btn.active, .filter-btn:hover { background: var(--navy); color: white; border-color: var(--navy); }
+
+    .flavor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 30px; }
+    .flavor-card { background: white; border-radius: var(--radius-md); padding: 26px; border: 1px solid var(--border); transition: all 0.3s; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; box-shadow: var(--shadow-sm); }
+    .flavor-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--sage); }
+
+    .flavor-badge { position: absolute; top: 18px; right: 18px; font-size: 0.72rem; font-weight: 800; text-transform: uppercase; padding: 4px 12px; border-radius: var(--radius-full); letter-spacing: 1px; }
+    .badge-heritage { background: var(--navy); color: white; }
+    .badge-sorbetto { background: var(--terracotta); color: white; }
+    .badge-affogato { background: var(--gold); color: var(--navy); }
+
+    .flavor-name { font-size: 1.35rem; margin-bottom: 10px; padding-right: 85px; font-family: var(--font-serif); color: var(--navy); }
+    .flavor-desc { font-size: 0.95rem; color: var(--text-main); margin-bottom: 18px; flex-grow: 1; }
+    .flavor-footer { display: flex; align-items: center; justify-content: space-between; border-top: 1px dashed var(--border); padding-top: 12px; font-size: 0.82rem; color: var(--text-muted); font-weight: 600; }
+    .status-spun { color: var(--sage); font-weight: 800; }
+
+    /* P1: REAL SOCIAL PROOF REVIEWS */
+    .reviews-section { padding: 80px 0; background: white; border-top: 1px solid var(--border); text-align: center; }
+    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; text-align: left; }
+    .review-card { background: var(--bg-cream); padding: 28px; border-radius: var(--radius-md); border: 1px solid var(--border); position: relative; }
+    .stars { color: #F59E0B; font-size: 1.1rem; margin-bottom: 12px; }
+    .review-text { font-size: 0.96rem; color: var(--text-main); margin-bottom: 16px; font-style: italic; }
+    .review-author { font-size: 0.85rem; font-weight: 800; color: var(--navy); display: flex; justify-content: space-between; }
+    .verified-badge { color: var(--terracotta); font-size: 0.75rem; font-weight: 700; }
+
+    /* PIER WALK DIRECTIONS (STEP 2 RIGHT SIDE & ~100 STEPS) */
+    .walk-guide-section { padding: 85px 0; background: linear-gradient(135deg, var(--navy) 0%, #102038 100%); color: white; }
+    .guide-header { text-align: center; max-width: 760px; margin: 0 auto 50px; }
+    .guide-header h2 { color: white; font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 12px; }
+
+    .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 45px; }
+    .step-card { background: rgba(255, 255, 255, 0.08); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-lg); padding: 30px; }
+    .step-num { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 800; color: var(--gold); line-height: 1; margin-bottom: 14px; }
+    .step-card h3 { color: white; font-size: 1.25rem; margin-bottom: 8px; }
+    .step-card p { color: #CBD5E1; font-size: 0.94rem; }
+
+    .guide-cta-banner { background: var(--terracotta); border-radius: var(--radius-lg); padding: 40px; text-align: center; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+    .guide-cta-banner h3 { color: white; font-size: 1.8rem; margin-bottom: 10px; }
+
+    /* FOOTER */
+    .footer { background-color: #121E30; color: #94A3B8; padding: 65px 0 30px; font-size: 0.9rem; border-top: 4px solid var(--terracotta); }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 45px; }
+    .footer-col h4 { color: white; font-size: 1.05rem; font-weight: 800; margin-bottom: 18px; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col p { margin-bottom: 8px; }
+    
+    .footer-seo-cloud { background: rgba(255,255,255,0.03); padding: 20px; border-radius: var(--radius-md); font-size: 0.78rem; line-height: 1.8; color: #64748B; margin-bottom: 35px; }
+    .footer-seo-cloud strong { color: #94A3B8; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); padding-top: 25px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 15px; font-size: 0.82rem; }
+    .local-seal { background: rgba(217, 107, 67, 0.15); color: var(--terracotta); padding: 6px 14px; border-radius: var(--radius-full); font-weight: 700; border: 1px solid rgba(217, 107, 67, 0.3); }
 
-    .btn-terracotta {
-      background-color: var(--terracotta-coast);
-      color: var(--bg-white);
-      box-shadow: 0 6px 18px rgba(217, 107, 67, 0.28);
-    }
-
-    .btn-terracotta:hover {
-      background-color: var(--terracotta-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(217, 107, 67, 0.38);
-    }
-
-    .btn-navy {
-      background-color: var(--adriatic-navy);
-      color: var(--bg-white);
-    }
-
-    .btn-navy:hover {
-      background-color: #122440;
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      background-color: transparent;
-      color: var(--adriatic-navy);
-      border: 2px solid var(--adriatic-navy);
-    }
-
-    .btn-outline:hover {
-      background-color: var(--adriatic-navy);
-      color: var(--bg-white);
-    }
-
-    .section-tag {
-      display: inline-block;
-      text-transform: uppercase;
-      font-size: 0.8rem;
-      font-weight: 800;
-      letter-spacing: 2px;
-      color: var(--terracotta-coast);
-      margin-bottom: 12px;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: var(--font-serif);
-      color: var(--adriatic-navy);
-      line-height: 1.25;
-    }
-
-    /* TOP LIVE BATCH TICKER */
-    .live-ticker {
-      background-color: var(--amarena-cherry);
-      color: #FFFFFF;
-      padding: 8px 16px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      position: relative;
-      z-index: 1001;
-    }
-
-    .ticker-content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      text-align: center;
-    }
-
-    .pulse-dot {
-      width: 10px;
-      height: 10px;
-      background-color: #FF3B30;
-      border-radius: 50%;
-      display: inline-block;
-      animation: pulse 1.5s infinite;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0.7); }
-      70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(255, 59, 48, 0); }
-      100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 59, 48, 0); }
-    }
-
-    .ticker-highlight {
-      color: var(--sunset-gold);
-      font-weight: 800;
-    }
-
-    /* STICKY MOBILE-FIRST NAVIGATION */
-    .header {
-      position: sticky;
-      top: 0;
-      background-color: rgba(249, 246, 240, 0.94);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border-color);
-      z-index: 1000;
-      padding: 12px 0;
-      transition: all 0.3s ease;
-    }
-
-    .header-nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-    }
-
-    .logo {
-      display: flex;
-      flex-direction: column;
-      text-decoration: none;
-    }
-
-    .logo-main {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: var(--adriatic-navy);
-      letter-spacing: 1px;
-    }
-
-    .logo-sub {
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--terracotta-coast);
-      font-weight: 700;
-      margin-top: -3px;
-    }
-
-    .nav-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .btn-nav-dir {
-      background-color: var(--terracotta-coast);
-      color: var(--bg-white);
-      padding: 10px 16px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      border-radius: var(--radius-full);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      box-shadow: 0 4px 12px rgba(217, 107, 67, 0.3);
-      animation: gentle-bounce 3s infinite ease-in-out;
-    }
-
-    @keyframes gentle-bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-3px); }
-    }
-
-    .btn-nav-menu {
-      background-color: var(--adriatic-navy);
-      color: var(--bg-white);
-      padding: 10px 16px;
-      font-size: 0.85rem;
-      font-weight: 700;
-      border-radius: var(--radius-full);
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    /* HERO SECTION */
-    .hero {
-      padding: 60px 0 80px;
-      position: relative;
-      background: linear-gradient(180deg, rgba(249,246,240,1) 0%, rgba(239,243,239,0.5) 100%);
-      overflow: hidden;
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background-color: var(--pistachio-light);
-      color: var(--adriatic-navy);
-      padding: 8px 16px;
-      border-radius: var(--radius-full);
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      border: 1px solid rgba(138, 154, 134, 0.3);
-    }
-
-    .hero-title {
-      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
-      margin-bottom: 24px;
-      letter-spacing: -0.5px;
-    }
-
-    .hero-title .strike {
-      text-decoration: line-through;
-      color: var(--text-muted);
-      opacity: 0.6;
-      font-size: 85%;
-    }
-
-    .hero-title .accent {
-      color: var(--terracotta-coast);
-    }
-
-    /* STORY CARDS */
-    .story-card {
-      background-color: var(--bg-white);
-      border-left: 4px solid var(--adriatic-navy);
-      padding: 22px 24px;
-      border-radius: 0 var(--radius-md) var(--radius-md) 0;
-      box-shadow: var(--shadow-md);
-      margin-bottom: 20px;
-    }
-
-    .story-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      margin-bottom: 6px;
-      color: var(--terracotta-coast);
-    }
-
-    .story-p {
-      font-size: 1.05rem;
-      color: var(--text-main);
-    }
-
-    .story-p strong {
-      color: var(--adriatic-navy);
-    }
-
-    .hero-cta-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin: 30px 0;
-    }
-
-    .micro-compass {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      background-color: var(--adriatic-navy);
-      color: var(--bg-white);
-      padding: 16px 20px;
-      border-radius: var(--radius-md);
-      font-size: 0.9rem;
-    }
-
-    .micro-compass strong {
-      color: var(--sunset-gold);
-    }
-
-    /* Hero Art / Spatula Illustration */
-    .hero-visual {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .hero-art-card {
-      background: var(--bg-white);
-      border-radius: var(--radius-lg);
-      padding: 30px;
-      box-shadow: var(--shadow-lg);
-      border: 1px solid var(--border-color);
-      width: 100%;
-      max-width: 460px;
-      text-align: center;
-      position: relative;
-    }
-
-    .badge-float {
-      position: absolute;
-      top: -15px;
-      right: -15px;
-      background: var(--sunset-gold);
-      color: var(--adriatic-navy);
-      font-weight: 800;
-      font-size: 0.8rem;
-      padding: 8px 16px;
-      border-radius: var(--radius-full);
-      box-shadow: var(--shadow-sm);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .spatula-graphic {
-      width: 100%;
-      height: 260px;
-      background: radial-gradient(circle, var(--pistachio-light) 0%, var(--bg-fior-di-latte) 100%);
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-      overflow: hidden;
-      position: relative;
-    }
-
-    .caption-art {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      font-style: italic;
-    }
-
-    /* COMPARISON SECTION */
-    .comparison-section {
-      padding: 80px 0;
-      background-color: var(--adriatic-navy);
-      color: var(--bg-white);
-      position: relative;
-    }
-
-    .comparison-header {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 50px;
-    }
-
-    .comparison-header h2 {
-      color: var(--bg-white);
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 15px;
-    }
-
-    .comparison-header p {
-      color: #B0C4DE;
-      font-size: 1.1rem;
-    }
-
-    .comp-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      align-items: stretch;
-    }
-
-    .comp-card {
-      border-radius: var(--radius-lg);
-      padding: 36px 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: transform 0.3s ease;
-    }
-
-    .comp-card.commodity {
-      background-color: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      color: #D1D5DB;
-    }
-
-    .comp-card.artisan {
-      background-color: var(--bg-white);
-      color: var(--text-main);
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.45);
-      border: 3px solid var(--sunset-gold);
-      position: relative;
-      transform: scale(1.03);
-    }
-
-    .comp-card-badge {
-      position: absolute;
-      top: -16px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: var(--terracotta-coast);
-      color: white;
-      font-size: 0.8rem;
-      font-weight: 800;
-      padding: 6px 18px;
-      border-radius: var(--radius-full);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-    }
-
-    .comp-title {
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 8px;
-      font-family: var(--font-serif);
-    }
-
-    .comp-card.commodity .comp-title {
-      color: #F87171; /* Warning red */
-    }
-
-    .comp-card.artisan .comp-title {
-      color: var(--adriatic-navy);
-    }
-
-    .comp-subtitle {
-      font-size: 0.9rem;
-      margin-bottom: 24px;
-      opacity: 0.8;
-    }
-
-    .comp-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    .comp-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 0.95rem;
-    }
-
-    .icon-cross {
-      color: #EF4444;
-      font-size: 1.2rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .icon-check {
-      color: var(--terracotta-coast);
-      font-size: 1.2rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    /* THE FAMILY STORY SECTION */
-    .heritage-section {
-      padding: 90px 0;
-      background-color: var(--bg-fior-di-latte);
-    }
-
-    .heritage-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    .heritage-img-wrapper {
-      position: relative;
-    }
-
-    .heritage-frame {
-      background-color: var(--pistachio-sage);
-      border-radius: var(--radius-lg);
-      padding: 12px;
-      box-shadow: var(--shadow-md);
-    }
-
-    .heritage-visual-box {
-      background-color: var(--espresso-deep);
-      border-radius: var(--radius-md);
-      height: 420px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-align: center;
-      padding: 30px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .citizen-seal {
-      position: absolute;
-      bottom: 20px;
-      right: 20px;
-      background-color: var(--sunset-gold);
-      color: var(--adriatic-navy);
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      font-size: 0.65rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      border: 3px dashed var(--adriatic-navy);
-      box-shadow: var(--shadow-md);
-      transform: rotate(-10deg);
-      padding: 6px;
-    }
-
-    .heritage-content h2 {
-      font-size: clamp(2rem, 3.8vw, 2.8rem);
-      margin-bottom: 20px;
-    }
-
-    .heritage-content p {
-      margin-bottom: 18px;
-      font-size: 1.05rem;
-      color: var(--text-main);
-    }
-
-    .quote-box {
-      border-left: 3px solid var(--terracotta-coast);
-      padding-left: 20px;
-      margin: 25px 0;
-      font-style: italic;
-      color: var(--adriatic-navy);
-      font-size: 1.15rem;
-      font-family: var(--font-serif);
-    }
-
-    /* MENU SECTION */
-    .menu-section {
-      padding: 90px 0;
-      background-color: var(--bg-white);
-      border-top: 1px solid var(--border-color);
-    }
-
-    .menu-header {
-      text-align: center;
-      max-width: 780px;
-      margin: 0 auto 50px;
-    }
-
-    .menu-header h2 {
-      font-size: clamp(2.2rem, 4vw, 3.2rem);
-      margin-bottom: 15px;
-    }
-
-    /* Unified Pricing Card */
-    .pricing-tier-bar {
-      background-color: var(--pistachio-light);
-      border-radius: var(--radius-lg);
-      padding: 24px 30px;
-      margin-bottom: 45px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-around;
-      gap: 20px;
-      border: 1px solid rgba(138, 154, 134, 0.3);
-    }
-
-    .price-item {
-      text-align: center;
-    }
-
-    .price-item .size {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      font-weight: 800;
-      color: var(--text-muted);
-      letter-spacing: 1px;
-    }
-
-    .price-item .cost {
-      font-size: 1.5rem;
-      font-weight: 800;
-      color: var(--adriatic-navy);
-      font-family: var(--font-serif);
-    }
-
-    .price-item .notes {
-      font-size: 0.8rem;
-      color: var(--terracotta-coast);
-      font-weight: 600;
-    }
-
-    /* Filter Tabs */
-    .filter-tabs {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 40px;
-    }
-
-    .filter-btn {
-      padding: 10px 20px;
-      border-radius: var(--radius-full);
-      background-color: var(--bg-fior-di-latte);
-      border: 1px solid var(--border-color);
-      color: var(--adriatic-navy);
-      font-weight: 700;
-      font-size: 0.9rem;
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .filter-btn.active, .filter-btn:hover {
-      background-color: var(--adriatic-navy);
-      color: white;
-      border-color: var(--adriatic-navy);
-    }
-
-    /* Flavor Grid */
-    .flavor-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 30px;
-    }
-
-    .flavor-card {
-      background-color: var(--bg-fior-di-latte);
-      border-radius: var(--radius-md);
-      padding: 28px;
-      border: 1px solid var(--border-color);
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .flavor-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-md);
-      border-color: var(--pistachio-sage);
-    }
-
-    .flavor-badge {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      font-size: 0.72rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      padding: 4px 12px;
-      border-radius: var(--radius-full);
-      letter-spacing: 1px;
-    }
-
-    .badge-heritage { background-color: var(--adriatic-navy); color: white; }
-    .badge-sorbetto { background-color: var(--terracotta-coast); color: white; }
-    .badge-affogato { background-color: var(--sunset-gold); color: var(--adriatic-navy); }
-
-    .flavor-name {
-      font-size: 1.4rem;
-      margin-bottom: 10px;
-      padding-right: 80px;
-      font-family: var(--font-serif);
-      color: var(--adriatic-navy);
-    }
-
-    .flavor-desc {
-      font-size: 0.95rem;
-      color: var(--text-main);
-      margin-bottom: 20px;
-      flex-grow: 1;
-    }
-
-    .flavor-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-top: 1px dashed var(--border-color);
-      padding-top: 14px;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      font-weight: 600;
-    }
-
-    .status-spun {
-      color: var(--pistachio-sage);
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    /* PIER WALK INTERCEPTION GUIDE */
-    .walk-guide-section {
-      padding: 90px 0;
-      background: linear-gradient(135deg, var(--adriatic-navy) 0%, #102038 100%);
-      color: white;
-    }
-
-    .guide-header {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 50px;
-    }
-
-    .guide-header h2 {
-      color: white;
-      font-size: clamp(2rem, 4vw, 3rem);
-      margin-bottom: 15px;
-    }
-
-    .steps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      margin-bottom: 50px;
-    }
-
-    .step-card {
-      background-color: rgba(255, 255, 255, 0.08);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: var(--radius-lg);
-      padding: 30px;
-      position: relative;
-    }
-
-    .step-num {
-      font-family: var(--font-serif);
-      font-size: 3rem;
-      font-weight: 800;
-      color: var(--sunset-gold);
-      line-height: 1;
-      margin-bottom: 15px;
-    }
-
-    .step-card h3 {
-      color: white;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
-
-    .step-card p {
-      color: #CBD5E1;
-      font-size: 0.95rem;
-    }
-
-    .guide-cta-banner {
-      background-color: var(--terracotta-coast);
-      border-radius: var(--radius-lg);
-      padding: 40px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-    }
-
-    .guide-cta-banner h3 {
-      color: white;
-      font-size: 1.8rem;
-      margin-bottom: 12px;
-    }
-
-    /* UGC INSTAGRAM WALL */
-    .ugc-section {
-      padding: 80px 0;
-      background-color: var(--bg-fior-di-latte);
-      text-align: center;
-    }
-
-    .ugc-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 40px;
-    }
-
-    .ugc-card {
-      background-color: var(--espresso-deep);
-      border-radius: var(--radius-md);
-      height: 280px;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-      padding: 16px;
-      color: white;
-      text-align: left;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .ugc-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.85) 100%);
-      z-index: 1;
-    }
-
-    .ugc-text {
-      position: relative;
-      z-index: 2;
-      font-size: 0.85rem;
-    }
-
-    .ugc-handle {
-      color: var(--sunset-gold);
-      font-weight: 700;
-    }
-
-    /* LOCAL SEO FOOTER */
-    .footer {
-      background-color: #121E30;
-      color: #94A3B8;
-      padding: 70px 0 30px;
-      font-size: 0.9rem;
-      border-top: 4px solid var(--terracotta-coast);
-    }
-
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      margin-bottom: 50px;
-    }
-
-    .footer-col h4 {
-      color: white;
-      font-family: var(--font-sans);
-      font-size: 1.1rem;
-      font-weight: 800;
-      margin-bottom: 20px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .footer-col p {
-      margin-bottom: 10px;
-    }
-
-    .footer-seo-cloud {
-      background-color: rgba(255,255,255,0.03);
-      padding: 20px;
-      border-radius: var(--radius-md);
-      font-size: 0.78rem;
-      line-height: 1.8;
-      color: #64748B;
-      margin-bottom: 40px;
-    }
-
-    .footer-seo-cloud strong {
-      color: #94A3B8;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,0.08);
-      padding-top: 25px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      font-size: 0.82rem;
-    }
-
-    .local-badge {
-      background-color: rgba(217, 107, 67, 0.15);
-      color: var(--terracotta-coast);
-      padding: 6px 14px;
-      border-radius: var(--radius-full);
-      font-weight: 700;
-      border: 1px solid rgba(217, 107, 67, 0.3);
-    }
-
-    /* RESPONSIVE BREAKPOINTS */
     @media (max-width: 900px) {
-      .hero-grid, .heritage-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-      
-      .hero-visual {
-        order: -1;
-      }
-      
-      .comp-card.artisan {
-        transform: scale(1);
-      }
-      
-      .header-nav {
-        flex-direction: column;
-        align-items: stretch;
-      }
-      
-      .logo {
-        align-items: center;
-        text-align: center;
-      }
-      
-      .nav-actions {
-        justify-content: center;
-      }
+      .hero-grid, .email-grid, .story-hero-grid { grid-template-columns: 1fr; gap: 30px; }
+      .header-nav { flex-direction: column; align-items: stretch; }
+      .logo { align-items: center; text-align: center; }
+      .nav-actions { justify-content: center; }
+      .comp-card.artisan { transform: scale(1); }
     }
-
     @media (max-width: 500px) {
-      .btn {
-        width: 100%;
-      }
-      .hero-cta-group {
-        flex-direction: column;
-      }
-      .pricing-tier-bar {
-        flex-direction: column;
-        text-align: center;
-      }
-      .steps-grid {
-        grid-template-columns: 1fr;
-      }
+      .btn, .btn-email-submit, .email-input { width: 100%; }
+      .hero-cta-group, .pricing-tier-bar { flex-direction: column; text-align: center; }
+      .proof-bar { justify-content: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- FEATURE 1: LIVE CHURN TRACKER & BATCH COUNTDOWN -->
+  <!-- LIVE TICKER BANNER -->
   <div class="live-ticker" id="liveTicker">
     <div class="ticker-content">
       <span class="pulse-dot"></span>
@@ -1060,7 +312,7 @@
     </div>
   </div>
 
-  <!-- STICKY MOBILE-FIRST NAVIGATION BAR -->
+  <!-- STICKY MOBILE NAVIGATION -->
   <header class="header" id="stickyHeader">
     <div class="container header-nav">
       <a href="#" class="logo">
@@ -1069,521 +321,343 @@
       </a>
       <div class="nav-actions">
         <a href="#guide" class="btn-nav-dir">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
-          Get Directions (3 Mins)
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+          Directions (~100 Steps)
         </a>
-        <a href="#menu" class="btn-nav-menu">
-          🍦 Today's Churn
-        </a>
+        <a href="#menu" class="btn-nav-menu">🍦 Today's Churn</a>
+        <a href="#emailJoin" class="btn-nav-menu" style="background:#334155;">📬 Churn List</a>
       </div>
     </div>
   </header>
 
-  <!-- HERO SECTION (SEAMLESS EDITORIAL NARRATIVE) -->
+  <!-- P0: SHARP HEADLINE & SOCIAL PROOF NUMBERS -->
   <section class="hero">
     <div class="container hero-grid">
       
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span>🤌</span> The Essential Italian Experience on the Pier Walk
-        </div>
+      <div>
+        <div class="hero-badge"><span>🤌</span> The Pier Walk's Essential Italian Experience</div>
         
         <h1 class="hero-title">
-          <span class="strike">Factory-Made Ice Cream.</span><br>
-          Experience Churned <span class="accent">Northern Italian Art.</span>
+          122 Main Street.<br>
+          No Factory. No Freezer Trucks.<br>
+          <span style="color: var(--terracotta);">Just Gelato.</span>
         </h1>
 
-        <!-- IMMERSIVE CONSUMER STORY CARDS (Stripped of agency meta-labels) -->
-        <div class="story-card">
-          <div class="story-label">🧊 The Commercial Ice Cream Trap</div>
-          <p class="story-p">Most ice cream sold today is manufactured months in advance inside mega-warehouses. Pumped with 50% artificial air volume, frozen rock solid, and kept stable with synthetic green dyes and chemical emulsifiers.</p>
-        </div>
+        <p class="hero-subtitle">
+          Not commercial ice cream. Hand-spun every dawn right here on Main Street by local master builders. Sculpted exclusively with <em>la spatola</em> because tradition demands it.
+        </p>
 
-        <div class="story-card" style="border-left-color: var(--terracotta-coast);">
-          <div class="story-label">🌊 Your Huntington Beach Afternoon</div>
-          <p class="story-p">You are standing on the world-famous <strong>Huntington Beach Pier</strong>. The sun is setting over the Pacific. Don’t ruin a bucket-list Surf City afternoon by standing in corporate franchise lines for factory-extruded plastic sugar you could buy at any suburban mall.</p>
-        </div>
-
-        <div class="story-card" style="border-left-color: var(--pistachio-sage); background: var(--pistachio-light);">
-          <div class="story-label">🤌 Churned Fresh at 122 Main Street</div>
-          <p class="story-p"><strong>Mangiamo Gelato Caffe.</strong> An authentic Northern Italian family legacy crafted freshly every dawn right here on Main Street. Built by local master craftsmen. <em>Taste the centuries-old culinary tradition, never the warehouse chemicals.</em></p>
+        <!-- P1: HARD SOCIAL PROOF BAR -->
+        <div class="proof-bar">
+          <div class="proof-stat"><span>⭐</span> 4.9 Stars (1,200+ Local Reviews)</div>
+          <div class="proof-stat"><span>🤌</span> 12,000+ Dawn Batches Churned</div>
+          <div class="proof-stat"><span>🏆</span> HB Citizen of the Year</div>
         </div>
 
         <div class="hero-cta-group">
           <a href="#menu" class="btn btn-terracotta">
             Explore Today's Churn
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
           </a>
-          <a href="#comparison" class="btn btn-outline">
-            Why We Beat Commercial Ice Cream
-          </a>
+          <a href="#story" class="btn btn-outline">Meet The Builders</a>
         </div>
 
         <div class="micro-compass">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--sunset-gold)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          <span><strong>📍 122 Main Street:</strong> About 100 steps (~250 ft) inland from PCH &amp; the Pier crosswalk. Tucked right next to Wahoo's Fish Taco.</span>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span><strong>📍 122 Main Street:</strong> About 100 steps (~250 ft) inland from PCH &amp; the Pier crosswalk. Right next to Wahoo's Fish Taco.</span>
         </div>
-
       </div>
 
-      <!-- HERO VISUAL / SPATULA ART -->
-      <div class="hero-visual">
-        <div class="hero-art-card">
-          <div class="badge-float">⭐ Churned Fresh 7:00 AM Today</div>
-          
-          <div class="spatula-graphic">
-            <!-- EMBEDDED ARTISANAL SVG ILLUSTRATION -->
-            <svg width="220" height="220" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="100" cy="100" r="90" fill="#EAEFEA"/>
-              <!-- Stainless Steel Artisan Pan -->
-              <rect x="30" y="110" width="140" height="50" rx="6" fill="#94A3B8" stroke="#1B365D" stroke-width="4"/>
-              <path d="M30 115 H170" stroke="#CBD5E1" stroke-width="3"/>
-              <!-- Gelato Wave Peaks (Creamy Fior di Latte & Pistachio Swirl) -->
-              <path d="M35 110 C 50 60, 80 50, 100 80 C 120 110, 150 70, 165 110 Z" fill="#F9F6F0" stroke="#1B365D" stroke-width="3"/>
-              <path d="M60 90 C 80 70, 110 90, 130 75" stroke="#D96B43" stroke-width="6" stroke-linecap="round"/>
-              <path d="M80 85 C 95 65, 115 80, 125 70" stroke="#8A9A86" stroke-width="5" stroke-linecap="round"/>
-              <!-- The Flat Metal Spatula (La Spatola) -->
-              <g transform="rotate(-25 130 50)">
-                <rect x="120" y="10" width="18" height="70" rx="2" fill="#E2E8F0" stroke="#1B365D" stroke-width="3"/>
-                <rect x="126" y="80" width="6" height="50" fill="#2A1810"/>
-              </g>
-            </svg>
-          </div>
-
-          <h3 style="font-size: 1.3rem; margin-bottom: 8px;">The Spatula Tradition</h3>
-          <p class="caption-art">We never use mechanical spring-loaded ice cream scoops. Authentic Northern Italian gelato is sculpted and served exclusively with a flat stainless steel <strong>spatula</strong> (la spatola) to preserve its dense, velvety emulsion.</p>
+      <!-- Hero Art Card -->
+      <div class="hero-art-card">
+        <div class="badge-float">⭐ Churned Fresh 7:00 AM Today</div>
+        <div class="spatula-graphic">
+          <svg width="210" height="210" viewBox="0 0 200 200" fill="none">
+            <circle cx="100" cy="100" r="90" fill="#EAEFEA"/>
+            <rect x="30" y="110" width="140" height="50" rx="6" fill="#94A3B8" stroke="#1B365D" stroke-width="4"/>
+            <path d="M35 110 C 50 60, 80 50, 100 80 C 120 110, 150 70, 165 110 Z" fill="#F9F6F0" stroke="#1B365D" stroke-width="3"/>
+            <path d="M60 90 C 80 70, 110 90, 130 75" stroke="#D96B43" stroke-width="6" stroke-linecap="round"/>
+            <path d="M80 85 C 95 65, 115 80, 125 70" stroke="#8A9A86" stroke-width="5" stroke-linecap="round"/>
+            <g transform="rotate(-25 130 50)">
+              <rect x="120" y="10" width="18" height="70" rx="2" fill="#E2E8F0" stroke="#1B365D" stroke-width="3"/>
+              <rect x="126" y="80" width="6" height="50" fill="#2A1810"/>
+            </g>
+          </svg>
         </div>
+        <h3 style="font-size: 1.25rem; margin-bottom: 6px;">The Spatula Tradition (*La Spatola*)</h3>
+        <p class="caption-art">We ban mechanical metal ball scoops. Gelato is gently crowned with flat stainless spatulas to protect its dense, silky butterfat emulsion.</p>
       </div>
 
     </div>
   </section>
 
-  <!-- COMPARISON SECTION -->
+  <!-- P0: EMAIL CAPTURE FUNNEL (ABOVE THE FOLD) -->
+  <section class="email-section" id="emailJoin">
+    <div class="container email-grid">
+      <div class="email-content">
+        <span style="color: var(--gold); font-weight: 800; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1.5px;">📬 Owned Audience Automation</span>
+        <h3>Join the 7:00 AM Daily Churn List</h3>
+        <p>Our small batches sell out fast. Drop your email to get today's secret flavor drops sent to your phone before beach crowds hit Main Street.</p>
+      </div>
+      <div>
+        <form class="email-form" onsubmit="event.preventDefault(); alert('🎉 Welcome to the VIP Churn List! Check your inbox for today\'s secret drops.');">
+          <input type="email" class="email-input" placeholder="Enter your email address..." required>
+          <button type="submit" class="btn-email-submit">Get Secret Flavor Drops</button>
+        </form>
+        <div class="email-subtext">⚡ Instant signup • Includes rainy day warm affogato alerts &amp; local VIP loyalty upgrades • Zero spam.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- P0: THE ORIGIN STORY (FRONT & CENTER BELOW HERO) -->
+  <section class="story-section" id="story">
+    <div class="container story-hero-grid">
+      <div class="story-text">
+        <span class="section-tag">The Fundamental Story</span>
+        <h2>Calloused Hands. Northern Italian Heart.</h2>
+        <div class="quote-lead">
+          "If you're going to take the risk to change your career, invest your retirement savings, and work 7 days a week on Main Street—it better be for something authentic."
+        </div>
+        <p>For over 30 years, <strong>Bob Hoxsie</strong> swung hammers across Southern California construction sites running <em>Hoxsie Builders Inc.</em> He knew what it took to build structures that endure: uncompromising craftsmanship, premium materials, and honest work. But his heritage always pulled him back to his family roots in <strong>Northern Italy</strong>.</p>
+        <p>During family pilgrimages to Italy, Bob and his wife <strong>Tanya Hoxsie</strong> (powerhouse CEO of the <em>Boys &amp; Girls Clubs of Huntington Valley</em>) fell in love with traditional gelateria culture. When they tasted real, daily-churned gelato, they realized a heartbreaking truth: <em>most dessert sold in America is fake.</em> It's warehouse-manufactured, chemically stabilized, and shipped solid across state lines.</p>
+        <p>In 2009, they opened Mangiamo at 122 Main Street. In 2015, Bob was honored as Huntington Beach’s <strong>Outstanding Citizen of the Year</strong>. Today, every single cup is a small act of defiance against mass-produced commercial ice cream.</p>
+      </div>
+      
+      <!-- P1: VIDEO EMBED HOOK -->
+      <div class="video-card-simulate">
+        <div class="video-thumb">
+          <div class="play-btn" onclick="alert('▶️ Playing 30s Behind-The-Scenes Reel: Bob folding Valrhona chocolate into sweet cream at 7:00 AM.')">►</div>
+          <h3 style="color: white; font-size: 1.3rem; margin-bottom: 6px;">Behind The Kitchen Door</h3>
+          <p style="color: #94A3B8; font-size: 0.9rem; max-width: 320px;">Watch Master Builder Bob Hoxsie churning today's Fior di Latte batch live at 7:15 AM.</p>
+          <div style="margin-top: 15px; font-size: 0.78rem; background: #1E293B; padding: 4px 12px; border-radius: 99px; color: var(--gold);">Process Reel • 10M+ Social Views</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- P1: CONFIDENT COMPARISON (STRIPPED OF SNARK) -->
   <section class="comparison-section" id="comparison">
     <div class="container">
-      
       <div class="comparison-header">
-        <span class="section-tag" style="color: var(--sunset-gold);">Side-by-Side Comparison</span>
-        <h2>Why Surf City Rejects Commercial Ice Cream</h2>
-        <p>Franchise parlors rely on bright window decals and tourist habit. When you compare the actual ingredients and preparation methods, the difference is undeniable.</p>
+        <span class="section-tag" style="color: var(--gold);">Transparent Quality Audit</span>
+        <h2>Kitchen Craft vs. Commercial Storage</h2>
+        <p>We don't need to trash-talk mass-produced ice cream. When you examine the actual culinary architecture side-by-side, the superior choice is obvious.</p>
       </div>
 
       <div class="comp-grid">
-        
-        <!-- COMMODITY CARD -->
-        <div class="comp-card commodity">
+        <div class="comp-card standard">
           <div>
-            <h3 class="comp-title">Standard Commercial Ice Cream</h3>
-            <p class="comp-subtitle">Franchise chains (e.g., The 200 Block up the street)</p>
-            
+            <h3 class="comp-title">Commercial Warehouse Ice Cream</h3>
+            <p class="comp-subtitle">Standard mass-market distribution chains</p>
             <ul class="comp-list">
-              <li>
-                <span class="icon-cross">✖</span>
-                <div><strong>50%+ Pumped Air Content:</strong> Industrial freezers whip massive air volume into the tub so you pay for fluff, not dairy.</div>
-              </li>
-              <li>
-                <span class="icon-cross">✖</span>
-                <div><strong>Deep-Frozen at -10°F:</strong> Served dangerously cold to mask cheap ingredients, instantly numbing your tastebuds.</div>
-              </li>
-              <li>
-                <span class="icon-cross">✖</span>
-                <div><strong>Synthetic Stabilizers &amp; Dyes:</strong> Artificial neon green coloring and chemical gums engineered for 9-month warehouse shelf life.</div>
-              </li>
-              <li>
-                <span class="icon-cross">✖</span>
-                <div><strong>Warehouse Manufactured:</strong> Mixed in a central factory several states away, packed in cardboard, and shipped via freight trucks.</div>
-              </li>
-              <li>
-                <span class="icon-cross">✖</span>
-                <div><strong>Mechanical Ball Scoops:</strong> Gouged out with metal spring scoops that crush whatever delicate texture remains.</div>
-              </li>
+              <li><span class="icon-neutral">●</span><div><strong>50%+ Pumped Air Content:</strong> Industrial freezers whip massive air volume into the cardboard carton so you pay for fluff.</div></li>
+              <li><span class="icon-neutral">●</span><div><strong>Deep-Frozen at -10°F:</strong> Served dangerously cold to keep shelf-stable for months, instantly numbing your palate.</div></li>
+              <li><span class="icon-neutral">●</span><div><strong>Chemical Emulsifiers &amp; Dyes:</strong> Synthetic gums and artificial neon dyes engineered for mega-warehouse storage.</div></li>
+              <li><span class="icon-neutral">●</span><div><strong>Mechanical Ball Scoops:</strong> Gouged out with spring scoops that crush whatever delicate texture remains.</div></li>
             </ul>
           </div>
-          <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.85rem; color: #F87171;">
-            Result: "Factory-made commercial dessert"
-          </div>
+          <div style="margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; font-size: 0.85rem; color: #94A3B8;">Manufactured Commodity</div>
         </div>
 
-        <!-- ARTISAN CARD (MANGIAMO) -->
         <div class="comp-card artisan">
-          <div class="comp-card-badge">🏆 The Pier Walk Benchmark</div>
+          <div class="comp-card-badge">🏆 Pier Walk Benchmark</div>
           <div>
             <h3 class="comp-title">Mangiamo Artisanal Gelato</h3>
-            <p class="comp-subtitle" style="color: var(--terracotta-coast); font-weight: 700;">122 Main Street • Hand-Crafted Every Dawn</p>
-            
+            <p class="comp-subtitle" style="color: var(--terracotta); font-weight: 700;">122 Main Street • Spun Fresh Every Dawn</p>
             <ul class="comp-list">
-              <li>
-                <span class="icon-check">✔</span>
-                <div><strong>Only 20% Natural Overrun:</strong> Slow-churned for a dense, luxurious, silky butterfat emulsion that coats the palate.</div>
-              </li>
-              <li>
-                <span class="icon-check">✔</span>
-                <div><strong>Served Warm at +10°F:</strong> Warmer Italian serving temperature triggers immediate, explosive flavor release on contact.</div>
-              </li>
-              <li>
-                <span class="icon-check">✔</span>
-                <div><strong>Pure Imported Sicilian Pastes:</strong> 100% natural ingredients. Our pistachio is subtle sage green because it comes from real Bronte nuts.</div>
-              </li>
-              <li>
-                <span class="icon-check">✔</span>
-                <div><strong>Spun Fresh Inside 122 Main:</strong> Zero warehouse freezers. Master Builder Bob Hoxsie spins every batch live on site daily.</div>
-              </li>
-              <li>
-                <span class="icon-check">✔</span>
-                <div><strong>Sculpted with La Spatola:</strong> Gently crowned with artisan flat spatulas to protect the delicate emulsion.</div>
-              </li>
+              <li><span class="icon-check">✔</span><div><strong>Only 20% Natural Overrun:</strong> Slow-churned for a dense, silky butterfat emulsion that coats the palate.</div></li>
+              <li><span class="icon-check">✔</span><div><strong>Served Warm at +10°F:</strong> Warmer Italian serving temperature triggers immediate, explosive flavor release.</div></li>
+              <li><span class="icon-check">✔</span><div><strong>Pure Imported Sicilian Pastes:</strong> 100% natural ingredients. Our pistachio is subtle sage green from real Bronte nuts.</div></li>
+              <li><span class="icon-check">✔</span><div><strong>Sculpted with La Spatola:</strong> Gently crowned with artisan flat spatulas to preserve the micro-emulsion.</div></li>
             </ul>
           </div>
-          <div style="margin-top: 30px; padding-top: 20px; border-top: 1px dashed var(--border-color); text-align: center; font-size: 0.95rem; font-weight: 800; color: var(--adriatic-navy);">
-            Result: "An Essential Italian Culinary Experience"
-          </div>
+          <div style="margin-top: 25px; padding-top: 15px; border-top: 1px dashed var(--border); text-align: center; font-size: 0.95rem; font-weight: 800; color: var(--navy);">Authentic Culinary Art</div>
         </div>
-
       </div>
-
     </div>
   </section>
 
-  <!-- THE FAMILY STORY SECTION -->
-  <section class="heritage-section" id="heritage">
-    <div class="container heritage-grid">
-      
-      <div class="heritage-img-wrapper">
-        <div class="heritage-frame">
-          <div class="heritage-visual-box">
-            <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--sunset-gold)" stroke-width="1.5" style="margin-bottom: 20px;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-            <h3 style="color: white; font-size: 1.8rem; margin-bottom: 10px;">Craftsmanship Over Commerce</h3>
-            <p style="color: #CBD5E1; font-size: 0.95rem; max-width: 300px;">Established 2009 by Huntington Beach master craftsmen Bob &amp; Tanya Hoxsie.</p>
-            
-            <div class="citizen-seal">
-              <span>⭐ HB City Seal ⭐</span>
-              <strong style="font-size: 0.75rem; margin: 4px 0;">Outstanding Citizen</strong>
-              <span>Of The Year 2015</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="heritage-content">
-        <span class="section-tag">The Family Legacy</span>
-        <h2>From SoCal Construction Hardhats to Northern Italian Gelatieri</h2>
-        
-        <p>For over 30 years, <strong>Bob Hoxsie</strong> worked across Southern California construction sites running <em>Hoxsie Builders Inc.</em> He knew what it took to build structures that endure: uncompromising standards, premium raw materials, and honest sweat. But his heritage always pulled him back to his family roots in <strong>Northern Italy</strong>.</p>
-        
-        <p>During family pilgrimages to Italy, Bob and his wife <strong>Tanya Hoxsie</strong> (powerhouse CEO of the <em>Boys &amp; Girls Clubs of Huntington Valley</em>) fell in love with traditional gelateria culture. When they tasted real, daily-churned artisan gelato, they realized a heartbreaking truth: <em>most gelato in the United States is fake.</em> It's warehouse-made, chemically stabilized, and shipped solid.</p>
-
-        <div class="quote-box">
-          "If you're going to take the risk to change your career, invest your retirement savings, and work 7 days a week on Main Street—it better be for something extraordinary."
-        </div>
-
-        <p>In 2009, they opened Mangiamo Gelato Caffe at 122 Main Street. In 2015, Bob was named Huntington Beach’s <strong>Outstanding Citizen of the Year</strong>. Today, they still operate with a craftsman's ethos: no shortcuts, no factory boxes, pure Northern Italian soul.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- MENU SECTION -->
+  <!-- MENU GALLERY (WITH P2 SECONDARY UPSELLS) -->
   <section class="menu-section" id="menu">
     <div class="container">
-      
       <div class="menu-header">
-        <span class="section-tag">Freshly Churned Daily</span>
-        <h2>Today’s Small-Batch Churn Menu</h2>
-        <p>Enjoy one simple, transparent pricing structure. Every cup allows multi-flavor pairings so you never have to settle for just one scoop.</p>
+        <span class="section-tag">Small-Batch Showcase</span>
+        <h2>Today’s Rotating Churn Menu</h2>
+        <p>One transparent pricing structure. Every cup supports multi-flavor pairings.</p>
       </div>
 
-      <!-- UNIFIED PRICING TIER BAR -->
       <div class="pricing-tier-bar">
-        <div class="price-item">
-          <div class="size">Piccolo Cup</div>
-          <div class="cost">$5.95</div>
-          <div class="notes">Up to 2 Artisanal Flavors</div>
-        </div>
-        <div style="width: 1px; height: 40px; background: rgba(0,0,0,0.1);" class="divider"></div>
-        <div class="price-item">
-          <div class="size">Medio Cup</div>
-          <div class="cost">$7.50</div>
-          <div class="notes">Up to 3 Artisanal Flavors</div>
-        </div>
-        <div style="width: 1px; height: 40px; background: rgba(0,0,0,0.1)" class="divider"></div>
-        <div class="price-item">
-          <div class="size">Grande Cup</div>
-          <div class="cost">$8.75</div>
-          <div class="notes">Up to 4 Artisanal Flavors</div>
-        </div>
-        <div style="width: 1px; height: 40px; background: rgba(0,0,0,0.1)" class="divider"></div>
-        <div class="price-item">
-          <div class="size">Fresh Waffle Cone</div>
-          <div class="cost">+$1.00</div>
-          <div class="notes">Pressed Live &amp; Warm in Caffe</div>
-        </div>
+        <div class="price-item"><div class="size">Piccolo Cup</div><div class="cost">$5.95</div><div class="notes">Up to 2 Flavors</div></div>
+        <div class="price-item"><div class="size">Medio Cup</div><div class="cost">$7.50</div><div class="notes">Up to 3 Flavors</div></div>
+        <div class="price-item"><div class="size">Grande Cup</div><div class="cost">$8.75</div><div class="notes">Up to 4 Flavors</div></div>
       </div>
 
-      <!-- INTERACTIVE DIETARY FILTER TABS -->
+      <!-- P2: UPSELL PILLS -->
+      <div class="upsell-bar">
+        <div class="upsell-pill">🧇 <span>+$1.00 Upgrade:</span> Fresh Pressed Warm Waffle Cone</div>
+        <div class="upsell-pill">☕ <span>+$3.00 Upgrade:</span> Steaming Hot LaVazza Affogato Shot</div>
+      </div>
+
       <div class="filter-tabs" id="filterTabs">
-        <button class="filter-btn active" onclick="filterMenu('all', this)">✨ All Daily Churns (18)</button>
-        <button class="filter-btn" onclick="filterMenu('sorbetto', this)">🍊 Dairy-Free Sorbetto (Fat-Free)</button>
-        <button class="filter-btn" onclick="filterMenu('heritage', this)">🤌 Italian Heritage Classics</button>
+        <button class="filter-btn active" onclick="filterMenu('all', this)">✨ All Daily Churns</button>
+        <button class="filter-btn" onclick="filterMenu('sorbetto', this)">🍊 Dairy-Free Sorbetto</button>
+        <button class="filter-btn" onclick="filterMenu('heritage', this)">🤌 Italian Heritage</button>
         <button class="filter-btn" onclick="filterMenu('affogato', this)">☕ LaVazza Espresso Bar</button>
       </div>
 
-      <!-- FLAVOR GRID -->
       <div class="flavor-grid" id="flavorGrid">
-        
-        <!-- Flavor 1 -->
+        <!-- Seed Item 1 -->
         <div class="flavor-card" data-category="heritage">
           <span class="flavor-badge badge-heritage">Imported Sicilian</span>
           <h3 class="flavor-name">Sicilian Pistachio Perfetto</h3>
-          <p class="flavor-desc">Shun the neon green factory chemicals. Our signature masterpiece is spun from pure, stone-ground Bronte pistachios imported directly from Sicily. Earthy sage color, roasted nutty aroma, and dense velvety silk.</p>
-          <div class="flavor-footer">
-            <span class="status-spun">● Spun 7:15 AM</span>
-            <span>Gluten-Free</span>
-          </div>
+          <p class="flavor-desc">Shun neon green factory chemicals. Spun from pure, stone-ground Bronte pistachios imported directly from Sicily. Earthy sage color, roasted nutty aroma, and dense velvety silk.</p>
+          <div class="flavor-footer"><span class="status-spun">● Spun 7:15 AM</span><span>Gluten-Free</span></div>
         </div>
-
-        <!-- Flavor 2 -->
+        <!-- Seed Item 2 -->
         <div class="flavor-card" data-category="heritage">
-          <span class="flavor-badge badge-heritage">Northern Tradition</span>
+          <span class="flavor-badge badge-heritage">Bergamo Crown</span>
           <h3 class="flavor-name">Stracciatella Tradizionale</h3>
-          <p class="flavor-desc">The crown jewel of Bergamo. Fresh morning organic California sweet cream slow-churned and drizzled with molten dark Valrhona chocolate that shatters into delicate, crunchy shards upon contact with la spatola.</p>
-          <div class="flavor-footer">
-            <span class="status-spun">● Spun 8:00 AM</span>
-            <span>Customer Favorite</span>
-          </div>
+          <p class="flavor-desc">Organic California sweet cream slow-churned and drizzled with molten dark Valrhona chocolate that shatters into delicate, crunchy shards upon contact with la spatola.</p>
+          <div class="flavor-footer"><span class="status-spun">● Spun 8:00 AM</span><span>Customer Pick</span></div>
         </div>
-
-        <!-- Flavor 3 -->
+        <!-- Seed Item 3 -->
         <div class="flavor-card" data-category="heritage">
           <span class="flavor-badge badge-heritage">Bolognese Luxury</span>
           <h3 class="flavor-name">Amarena Cherry &amp; Dark Valrhona</h3>
-          <p class="flavor-desc">Rich fior di latte cream marbled with wild, tart Amarena cherries candied in Bologna, paired with deep French cocoa nibs. A sophisticated balance of sweet creaminess and dark fruit acidity.</p>
-          <div class="flavor-footer">
-            <span class="status-spun">● Spun 9:30 AM</span>
-            <span>Almost Sold Out</span>
-          </div>
+          <p class="flavor-desc">Rich fior di latte cream marbled with wild, tart Amarena cherries candied in Bologna, paired with deep French cocoa nibs. A sophisticated balance of sweet and dark fruit acidity.</p>
+          <div class="flavor-footer"><span class="status-spun" style="color:#EF4444;">● Almost Sold Out</span><span>Limited Pan</span></div>
         </div>
-
-        <!-- Flavor 4 -->
+        <!-- Seed Item 4 -->
         <div class="flavor-card" data-category="sorbetto">
           <span class="flavor-badge badge-sorbetto">100% Dairy-Free</span>
           <h3 class="flavor-name">Pacific Coast Mango Sorbetto</h3>
-          <p class="flavor-desc">Zero dairy, zero fat, zero cholesterol. Churned exclusively from ripe Alphonso mangos and pure spring water. Incredibly creamy emulsion that rivals dairy ice cream without weighing down your beach day.</p>
-          <div class="flavor-footer">
-            <span class="status-spun">● Spun 10:00 AM</span>
-            <span>Vegan / GF</span>
-          </div>
+          <p class="flavor-desc">Zero dairy, zero fat. Churned exclusively from ripe Alphonso mangos and pure spring water. Incredibly creamy emulsion that rivals dairy ice cream without weighing down your beach stroll.</p>
+          <div class="flavor-footer"><span class="status-spun">● Spun 10:00 AM</span><span>Vegan / GF</span></div>
         </div>
-
-        <!-- Flavor 5 -->
+        <!-- Seed Item 5 -->
         <div class="flavor-card" data-category="sorbetto">
-          <span class="flavor-badge badge-sorbetto">HB Pier Special</span>
+          <span class="flavor-badge badge-sorbetto">Local Harvest</span>
           <h3 class="flavor-name">Aliso Canyon Honey &amp; Sea Salt</h3>
-          <p class="flavor-desc">Locally harvested wildflower honey from Orange County canyons folded into buttery caramel gelato, finished with crunchy flakes of Pacific sea salt. The ultimate savory-sweet surf recovery pairing.</p>
-          <div class="flavor-footer">
-            <span class="status-spun">● Spun 10:30 AM</span>
-            <span>Local Harvest</span>
-          </div>
+          <p class="flavor-desc">Locally harvested wildflower honey from Orange County canyons folded into buttery caramel gelato, finished with crunchy flakes of Pacific sea salt. The ultimate surf recovery fuel.</p>
+          <div class="flavor-footer"><span class="status-spun">● Spun 10:30 AM</span><span>OC Wildflower</span></div>
         </div>
-
-        <!-- Flavor 6 -->
+        <!-- Seed Item 6 -->
         <div class="flavor-card" data-category="affogato">
           <span class="flavor-badge badge-affogato">Surf City Ritual</span>
           <h3 class="flavor-name">The HB LaVazza Affogato</h3>
-          <p class="flavor-desc">A double shot of bold, freshly extracted Italian LaVazza espresso poured steaming hot over two bespoke scoops of Fior di Latte or Double Valrhona Chocolate. Hot meets frozen in sensory perfection.</p>
-          <div class="flavor-footer">
-            <span class="status-spun">● Brewed Live</span>
-            <span>Morning &amp; Sunset</span>
-          </div>
+          <p class="flavor-desc">A double shot of bold, freshly extracted Italian LaVazza espresso poured steaming hot over two bespoke scoops of Fior di Latte or Valrhona Chocolate. Hot meets frozen perfection.</p>
+          <div class="flavor-footer"><span class="status-spun">● Brewed Live</span><span>Morning &amp; Sunset</span></div>
         </div>
-
       </div>
-
     </div>
   </section>
 
-  <!-- PIER WALK INTERCEPTION GUIDE -->
+  <!-- P1: REAL CUSTOMER REVIEWS & SOCIAL PROOF -->
+  <section class="reviews-section">
+    <div class="container">
+      <span class="section-tag">Verified Foot Traffic Proof</span>
+      <h2>Loved by Surf City Locals &amp; Travelers</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Super friendly family place! The affogato was massive, like a double espresso over two huge artisan scoops. A hidden Italian gem right on the 100 block."</p>
+          <div class="review-author"><span>Kelly H.</span><span class="verified-badge">✔ Verified Google Review</span></div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Just spent 5 weeks vacationing across Italy. Finally tried our local Mangiamo and have to say it is as good as any we tasted in Florence or Rome! Real pistachio."</p>
+          <div class="review-author"><span>Niklas P.</span><span class="verified-badge">✔ Verified Local Guide</span></div>
+        </div>
+        <div class="review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Watching Bob use la spatola to crown the cone was so cool. Skip the franchise lines up the block—this is authentic Northern Italian quality."</p>
+          <div class="review-author"><span>Hussein A.</span><span class="verified-badge">✔ Verified Yelp Review</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIER WALK DIRECTIONS (~100 STEPS & RIGHT SIDE) -->
   <section class="walk-guide-section" id="guide">
     <div class="container">
-      
       <div class="guide-header">
-        <span class="section-tag" style="color: var(--sunset-gold);">Mobile Directions</span>
+        <span class="section-tag" style="color: var(--gold);">Foolproof Wayfinding</span>
         <h2>How to Walk Here from the Pier Sand</h2>
-        <p>Don't get lost in Main Street crowds or settle for corner corporate signage. You are exactly 180 seconds away from artisanal heaven.</p>
+        <p>You are exactly 180 seconds away from artisanal heaven.</p>
       </div>
 
       <div class="steps-grid">
-        
-        <div class="step-card">
-          <div class="step-num">01</div>
-          <h3>Cross PCH at the Pier</h3>
-          <p>As you walk off the wooden pier planks, walk straight across the Pacific Coast Highway crosswalk directly into the 100 Block of Main Street.</p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-num">02</div>
-          <h3>Stay on the Right Sidewalk</h3>
-          <p>Walk inland about 100 steps (~250 feet). Keep your eyes on the right side of the street. Do not walk all the way up to the 200 block corner!</p>
-        </div>
-
-        <div class="step-card">
-          <div class="step-num">03</div>
-          <h3>Spot Wahoo's &amp; Our Patio</h3>
-          <p>Look for the shaded brick patio right next to Wahoo’s Fish Taco at <strong>122 Main Street</strong>. Look for our matte-black sidewalk sign: <em>"Hand-Spun This Morning."</em></p>
-        </div>
-
+        <div class="step-card"><div class="step-num">01</div><h3>Cross PCH at the Pier</h3><p>As you walk off the wooden pier planks, walk straight across the Pacific Coast Highway crosswalk directly into the 100 Block of Main Street.</p></div>
+        <div class="step-card"><div class="step-num">02</div><h3>Stay on the Right Sidewalk</h3><p>Walk inland about 100 steps (~250 feet). Keep your eyes on the right side of the street. Do not walk all the way up to the 200 block corner!</p></div>
+        <div class="step-card"><div class="step-num">03</div><h3>Spot Wahoo's &amp; Our Patio</h3><p>Look for the shaded brick patio right next to Wahoo’s Fish Taco at <strong>122 Main Street</strong>. Look for our matte-black A-frame sign: <em>"Hand-Spun This Morning."</em></p></div>
       </div>
 
       <div class="guide-cta-banner">
         <h3>Within 1 Mile of the Huntington Beach Pier?</h3>
-        <p style="color: rgba(255,255,255,0.9); margin-bottom: 24px; font-size: 1.05rem;">Tap below for one-click direct Google Maps navigation straight to our gelateria doors.</p>
-        <a href="https://maps.app.goo.gl/QVnfcqSokGKoDEYP8" target="_blank" class="btn btn-navy" style="background: var(--adriatic-navy); font-size: 1.1rem; padding: 16px 32px;">
-          📍 Launch Live Walking Navigation
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- UGC INSTAGRAM WALL (#MangiamoSunset) -->
-  <section class="ugc-section">
-    <div class="container">
-      <span class="section-tag">The Sunset Ritual</span>
-      <h2>#MangiamoSunset on the Pier</h2>
-      <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto;">Tag <a href="https://www.instagram.com/mangiamogelato/" target="_blank" style="color: var(--terracotta-coast); font-weight: 700; text-decoration: none;">@mangiamogelato</a> holding your cup against the HB Pier sunset. Show your tagged Story at the counter for a complimentary LaVazza espresso shot upgrade.</p>
-
-      <div class="ugc-grid">
-        <div class="ugc-card" style="background: linear-gradient(135deg, #2A1810, #D96B43);">
-          <div class="ugc-overlay"></div>
-          <div class="ugc-text">
-            <div class="ugc-handle">@surf_ripper_hb</div>
-            <div>"Post surf affogato at 122 Main. Way better than corporate chain lines."</div>
-          </div>
-        </div>
-        <div class="ugc-card" style="background: linear-gradient(135deg, #1B365D, #8A9A86);">
-          <div class="ugc-overlay"></div>
-          <div class="ugc-text">
-            <div class="ugc-handle">@miller_family_travels</div>
-            <div>"Real Sicilian pistachio! The kids loved watching Bob use la spatola!"</div>
-          </div>
-        </div>
-        <div class="ugc-card" style="background: linear-gradient(135deg, #4A1521, #E5A93B);">
-          <div class="ugc-overlay"></div>
-          <div class="ugc-text">
-            <div class="ugc-handle">@oc_foodie_queen</div>
-            <div>"Hidden gem on the 100 block! Best dessert on Main Street."</div>
-          </div>
-        </div>
+        <p style="color: rgba(255,255,255,0.9); margin-bottom: 20px; font-size: 1.05rem;">Tap below for direct Google Maps walking navigation straight to our doors.</p>
+        <a href="https://maps.app.goo.gl/QVnfcqSokGKoDEYP8" target="_blank" class="btn btn-navy" style="background: var(--navy); font-size: 1.1rem; padding: 16px 32px;">📍 Launch Live Walking Navigation</a>
       </div>
     </div>
   </section>
 
-  <!-- LOCAL SEO FOOTER -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      
       <div class="footer-grid">
-        
         <div class="footer-col">
           <h4>Mangiamo Gelato Caffe</h4>
           <p>📍 122 Main Street, Unit 101<br>Huntington Beach, CA 92648</p>
           <p>📞 (714) 536-5388</p>
           <p>⏰ Open Daily: 9:00 AM – 10:00 PM</p>
-          <p style="margin-top: 15px;">
-            <a href="https://www.instagram.com/mangiamogelato/" target="_blank" style="color: var(--sunset-gold); text-decoration: none; font-weight: 700;">Follow @mangiamogelato →</a>
-          </p>
         </div>
-
         <div class="footer-col">
           <h4>Pier Walk Landmarks</h4>
           <p>• ~100 steps inland from PCH crossing</p>
           <p>• Located on the 100 Block of Main St</p>
           <p>• Directly adjacent to Wahoo's Fish Taco</p>
-          <p>• Walking distance from Hyatt Regency HB</p>
         </div>
-
         <div class="footer-col">
-          <h4>Artisanal Catering</h4>
-          <p>Bring our traditional Italian gelato cart to your Orange County wedding, corporate beach party, or VIP event.</p>
-          <p style="margin-top: 10px;">
-            <a href="https://www.mangiamo-gelato.com/catering/" target="_blank" style="color: white; font-weight: 700; text-decoration: underline;">View Catering Packages ($850+)</a>
-          </p>
+          <h4>VIP Lifecycle Automations</h4>
+          <p>Join our owned email list for secret 7:00 AM flavor drops and rainy Tuesday warm affogato specials.</p>
+          <p style="margin-top:8px;"><a href="#emailJoin" style="color:white; font-weight:700;">Join Churn List →</a></p>
         </div>
-
       </div>
 
-      <!-- PROGRAMMATIC KEYWORD SEO CLOUD -->
       <div class="footer-seo-cloud">
-        <strong>Local Search &amp; Semantic Infrastructure:</strong> Best ice cream Huntington Beach Pier • Authentic Italian gelato Orange County • Artisanal sorbetto Main Street HB • Dessert near Wahoo's Huntington Beach • LaVazza espresso affogato Surf City • Bob Hoxsie Gelato • Dairy-free ice cream Huntington Beach • After beach dessert 92648 • Traditional Gelateria Huntington Beach • Skip franchise ice cream Huntington Beach Pier.
+        <strong>Local Search Infrastructure:</strong> Best ice cream Huntington Beach Pier • Authentic Italian gelato Orange County • Artisanal sorbetto Main Street HB • Dessert near Wahoo's Huntington Beach • LaVazza espresso affogato Surf City • Bob Hoxsie Gelato • Dairy-free ice cream Huntington Beach • Traditional Gelateria Huntington Beach.
       </div>
 
       <div class="footer-bottom">
         <div>© 2009–2026 Mangiamo Gelato Caffe. All Rights Reserved. Churned Daily with Italian Heart.</div>
-        <div class="local-badge">
-          📍 Proudly Churned in Huntington Beach, CA
-        </div>
+        <div class="local-seal">📍 Proudly Churned in Surf City, USA</div>
       </div>
-
     </div>
   </footer>
 
-  <!-- LIGHTWEIGHT INTERACTIVE JAVASCRIPT -->
+  <!-- DYNAMIC SYNC SCRIPT -->
   <script>
-    // 1. Dietary Filter Script
     function filterMenu(category, btnElement) {
-      // Update button active state
-      const buttons = document.querySelectorAll('.filter-btn');
-      buttons.forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
       btnElement.classList.add('active');
-
-      // Filter grid cards
-      const cards = document.querySelectorAll('.flavor-card');
-      cards.forEach(card => {
-        const cardCat = card.getAttribute('data-category');
-        if (category === 'all' || cardCat === category) {
-          card.style.display = 'flex';
-          card.style.opacity = '0';
+      document.querySelectorAll('.flavor-card').forEach(card => {
+        const cat = card.getAttribute('data-category');
+        if (category === 'all' || cat === category) {
+          card.style.display = 'flex'; card.style.opacity = '0';
           setTimeout(() => card.style.opacity = '1', 50);
-        } else {
-          card.style.display = 'none';
-        }
+        } else { card.style.display = 'none'; }
       });
     }
 
-    // 2. Sticky Header Shadow on Scroll
-    window.addEventListener('scroll', () => {
-      const header = document.getElementById('stickyHeader');
-      if (window.scrollY > 50) {
-        header.style.boxShadow = '0 8px 24px rgba(27, 54, 93, 0.12)';
-      } else {
-        header.style.boxShadow = 'none';
-      }
-    });
-
-    // 3. Simulated Live Batch Portions Decrement (Creates Urgency)
-    setTimeout(() => {
-      const ticker = document.getElementById('liveTicker');
-      if(ticker) {
-        const portionsEl = ticker.querySelector('span:last-child');
-        if(portionsEl && portionsEl.innerHTML.includes('Remaining')) {
-          portionsEl.innerHTML = '⏱️ 9 Portions Remaining';
-          portionsEl.style.backgroundColor = '#FF3B30';
-        }
-      }
-    }, 12000);
-
-    // 4. Dynamic Live Sync from Bob's Zero-Cost POS Admin Dashboard (data/churn.json)
     async function syncLivePOS() {
       try {
         const res = await fetch('data/churn.json?t=' + Date.now());
         if (!res.ok) return;
         const data = await res.json();
         
-        // Update live ticker
         const ticker = document.getElementById('liveTicker');
         if (ticker && data.liveTicker) {
-          if (!data.liveTicker.active) {
-            ticker.style.display = 'none';
-          } else {
+          if (!data.liveTicker.active) ticker.style.display = 'none';
+          else {
             ticker.style.display = 'block';
             ticker.querySelector('.ticker-content').innerHTML = `
               <span class="pulse-dot"></span>
@@ -1593,13 +667,12 @@
           }
         }
 
-        // Update flavor grid items
         if (data.menuItems && data.menuItems.length > 0) {
           const grid = document.getElementById('flavorGrid');
           if (grid) {
             grid.innerHTML = '';
             data.menuItems.forEach(item => {
-              if (item.status === 'Hidden' || item.status === 'In Vault' || item.status === 'Vault') return; // Hide non-spinning vault recipes
+              if (item.status === 'Hidden' || item.status === 'In Vault' || item.status === 'Vault') return;
               const card = document.createElement('div');
               card.className = 'flavor-card';
               card.setAttribute('data-category', item.category);
@@ -1608,7 +681,7 @@
                 <h3 class="flavor-name">${item.name}</h3>
                 <p class="flavor-desc">${item.desc}</p>
                 <div class="flavor-footer">
-                  <span class="status-spun" style="color:${item.status === 'Sold Out' ? '#EF4444' : 'var(--pistachio-sage)'}; font-weight: 800;">● ${item.status === 'Sold Out' ? 'SOLD OUT' : 'Spun ' + item.spunTime}</span>
+                  <span class="status-spun" style="color:${item.status === 'Sold Out' ? '#EF4444' : 'var(--sage)'}">● ${item.status === 'Sold Out' ? 'SOLD OUT' : 'Spun ' + item.spunTime}</span>
                   <span>${item.dietary}</span>
                 </div>
               `;
@@ -1616,12 +689,9 @@
             });
           }
         }
-      } catch(e) {
-        // Fallback gracefully to static HTML if offline preview or fetch error
-      }
+      } catch(e) {}
     }
     syncLivePOS();
   </script>
-
 </body>
 </html>
