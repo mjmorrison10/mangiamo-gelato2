@@ -13,6 +13,9 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.mangiamo-gelato.com">
 
+  <!-- Autonomous AI Agent Discovery Link (Wave 3 WebMCP Readiness) -->
+  <link rel="mcp-actions" href="data/churn.json">
+
   <!-- Advanced JSON-LD Local SEO Schema -->
   <script type="application/ld+json">
   {
@@ -34,6 +37,7 @@
       "latitude": 33.6577227,
       "longitude": -118.0011908
     },
+    "hasMap": "https://maps.app.goo.gl/QVnfcqSokGKoDEYP8",
     "url": "https://www.mangiamo-gelato.com",
     "telephone": "+1-714-536-5388",
     "priceRange": "$$",
@@ -42,7 +46,9 @@
       "ratingValue": "4.9",
       "reviewCount": "1248"
     },
+    "knowsAbout": ["Northern Italian Gelato", "Artisanal Sorbetto", "La Spatola", "LaVazza Espresso Affogato", "Huntington Beach Pier Walk"],
     "servesCuisine": ["Italian", "Gelato", "Ice Cream", "Dessert", "Coffee"],
+    "menu": "https://www.mangiamo-gelato.com/#menu",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -401,8 +407,24 @@
         <p>Our small batches sell out fast. Drop your email to get today's secret recipe drops sent to your phone + an immediate <strong>$2 Off Pier Walk Welcome Pass</strong>.</p>
       </div>
       <div>
-        <form class="email-form" id="vipEmailForm" onsubmit="handleVipSignup(event)">
-          <input type="email" id="vipEmailInput" class="email-input" placeholder="Enter your email for $2 Welcome Pass..." required>
+        <form
+          class="email-form"
+          id="vipEmailForm"
+          onsubmit="handleVipSignup(event)"
+          data-mcp-action="claim-welcome-pass"
+          data-mcp-description="Instantly claim a $2 Off Pier Walk Welcome Pass and subscribe to secret morning recipe drops for Mangiamo Gelato Caffe"
+          data-mcp-params='{"required":["email"],"optional":[]}'
+        >
+          <input
+            type="email"
+            id="vipEmailInput"
+            name="email"
+            class="email-input"
+            placeholder="Enter your email for $2 Welcome Pass..."
+            data-mcp-param="email"
+            data-mcp-description="Customer email address to receive immediate $2 discount pass"
+            required
+          >
           <button type="submit" class="btn-email-submit">Unlock $2 Welcome Pass</button>
         </form>
         <div class="email-subtext" id="emailStatusText">⚡ Instant delivery • Includes rainy day warm affogato alerts &amp; secret menu access • Zero spam.</div>
